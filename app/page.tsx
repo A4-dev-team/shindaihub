@@ -1,57 +1,41 @@
 import Link from "next/link";
 
-import { HomeModernIcon, AcademicCapIcon } from "@heroicons/react/24/solid";
+import { AcademicCapIcon } from "@heroicons/react/24/solid";
+import Header from "./_components/header";
+import ServiceBlock from "./_components/serviceBlock";
 
 export default function Home() {
     return (
-        <div className="flex flex-col items-center justify-center h-screen px-10">
-            {/* タイトル */}
-            <div className="text-lg sm:text-3xl font-bold p-10 md:p-20">
-                神大生のためのアプリ
+        <div className="h-screen flex flex-col items-center bg-whitecustum">
+            <Header />
+            <div className="flex flex-col w-2/3 h-1/4 md:h-1/3 justify-center text-blackcustum">
+                <div className="text-3xl md:text-5xl font-bold pb-3">
+                    Hack Kobe.Uni
+                </div>
+                <div className="text-sm md:text-xl">
+                    神大生に最高の学生生活を届ける。
+                </div>
             </div>
-            {/* それぞれへのリンク */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 sm:gap-10">
-                <div className="bg-gradient-to-tl from-slate-400 to-slate-50 p-3 rounded">
-                    <Link
-                        href={
-                            "https://a4-kobeuni-rentalhouses.glide.page/dl/d8fc49"
+            <div className="flex flex-col items-center justify-center px-10">
+                {/* タイトル */}
+
+                {/* それぞれへのリンク */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 sm:gap-10">
+                    <ServiceBlock
+                        serviceName="賃貸"
+                        // TODO: 賃貸のURLを修正する
+                        url={"https://shindaihub-rentalhouse.glide.page/"}
+                        icon={
+                            <AcademicCapIcon className="h-5 w-5 mr-2 text-bluenormal" />
                         }
-                    >
-                        <div className="flex flex-row items-center pb-5">
-                            <HomeModernIcon className="h-5 w-5 mr-2" />
-                            <p className="font-bold text-xl">賃貸</p>
-                        </div>
-                        <p>物件の評判を掲載</p>
-                        <p>住む場所を決める新入生におすすめ</p>
-                    </Link>
-                </div>
-                <div className="bg-gradient-to-tl from-slate-400 to-slate-50 p-3 rounded">
-                    <Link href={"https://s-app-xi88.glide.page/"}>
-                        <div className="flex flex-row items-center pb-5">
-                            <AcademicCapIcon className="h-5 w-5 mr-2" />
-                            <p className="font-bold text-xl">授業</p>
-                        </div>
-                        <p>物件の評判を掲載</p>
-                        <p>住む場所を決める新入生におすすめ</p>
-                    </Link>
-                </div>
-                <div className="">
-                    <Link href={""} className="pointer-events-none">
-                        <div className="flex flex-row items-center pb-5">
-                            <HomeModernIcon className="h-5 w-5 mr-2" />
-                            <p className="font-bold text-xl">バイト</p>
-                        </div>
-                        <p>Coming soon ...</p>
-                    </Link>
-                </div>
-                <div className="">
-                    <Link href={""} className="pointer-events-none">
-                        <div className="flex flex-row items-center pb-5">
-                            <HomeModernIcon className="h-5 w-5 mr-2" />
-                            <p className="font-bold text-xl">ご飯</p>
-                        </div>
-                        <p>Coming soon ...</p>
-                    </Link>
+                        textContent={[
+                            "物件の情報や口コミを掲載",
+                            "住む場所を決める新入生におすすめ",
+                        ]}
+                    />
+                    <ServiceBlock serviceName="授業" disabled={true} />
+                    <ServiceBlock serviceName="バイト" disabled={true} />
+                    <ServiceBlock serviceName="ご飯" disabled={true} />
                 </div>
             </div>
         </div>
