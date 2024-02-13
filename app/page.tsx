@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { AcademicCapIcon } from "@heroicons/react/24/solid";
+import { HomeIcon } from "@heroicons/react/24/solid";
 import Header from "./_components/header";
 import ServiceBlock from "./_components/serviceBlock";
 
@@ -26,7 +26,7 @@ export default function Home() {
                         // TODO: 賃貸のURLを修正する
                         url={"https://shindaihub-rentalhouse.glide.page/"}
                         icon={
-                            <AcademicCapIcon className="h-5 w-5 mr-2 text-bluenormal" />
+                            <HomeIcon className="h-5 w-5 mr-2 text-bluenormal" />
                         }
                         textContent={[
                             "物件の情報や口コミを掲載",
