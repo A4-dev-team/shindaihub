@@ -20,7 +20,7 @@ export default function Home() {
                 {/* タイトル */}
 
                 {/* それぞれへのリンク */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 sm:gap-10">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-10">
                     <ServiceBlock
                         serviceName="賃貸"
                         // TODO: 賃貸のURLを修正する
