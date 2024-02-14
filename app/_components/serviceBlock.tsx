@@ -6,6 +6,7 @@ type ServiceBlockProps =
     | {
           disabled: true;
           serviceName: string;
+          textContent: string[]; // テキストコンテンツを配列として受け取る
       }
     | {
           disabled?: false;
@@ -17,7 +18,7 @@ type ServiceBlockProps =
 
 const ServiceBlock: React.FC<ServiceBlockProps> = (props) => {
     if (props.disabled === true) {
-        const { serviceName } = props;
+        const { serviceName, textContent } = props;
         return (
             <Link
                 href={""}
@@ -31,9 +32,14 @@ const ServiceBlock: React.FC<ServiceBlockProps> = (props) => {
                             </span>{" "}
                         </div>
                     </div>
-                    <span className="text-base text-slate-500 transition duration-300 group-hover:text-white">
-                        comming soon...
-                    </span>
+                    {textContent.map((text, index) => (
+                        <span
+                            key={index}
+                            className="text-xs md:text-base text-slate-500 transition duration-300 group-hover:text-white"
+                        >
+                            {text}
+                        </span> // <p>を<span>に変更してスタイルを維持
+                    ))}
                 </div>
             </Link>
         );
