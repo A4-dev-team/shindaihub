@@ -22,10 +22,14 @@ export default function Home() {
                 {/* それぞれへのリンク */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-10">
                     <ServiceBlock
-                        disabled={true}
+                        disabled={false}
                         serviceName="賃貸"
-                        // TODO: 賃貸のURLを修正する
-                        textContent={["近日公開！"]}
+                        icon={<HomeIcon className="h-10 w-10" />}
+                        url="https://shindaihub-rentalhouse.glide.page/"
+                        textContent={[
+                            "神戸大学生のための賃貸情報を掲載！",
+                            "賃貸の口コミを確認できます！",
+                        ]}
                     />
                     <ServiceBlock
                         serviceName="授業"
