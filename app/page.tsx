@@ -1,6 +1,9 @@
 import Link from "next/link";
 
-import { HomeIcon } from "@heroicons/react/24/solid";
+import { IoHome } from "react-icons/io5";
+import { IoIosSchool } from "react-icons/io";
+import { PiForkKnife } from "react-icons/pi";
+import { FaPersonDigging } from "react-icons/fa6";
 import Header from "./_components/header";
 import ServiceBlock from "./_components/serviceBlock";
 
@@ -24,7 +27,7 @@ export default function Home() {
                     <ServiceBlock
                         disabled={false}
                         serviceName="賃貸"
-                        icon={<HomeIcon className="h-10 w-10" />}
+                        icon={<IoHome className="h-10 w-10" />}
                         url="https://shindaihub-rentalhouse.glide.page/"
                         textContent={[
                             "神戸大学生のための賃貸情報を掲載！",
@@ -32,18 +35,24 @@ export default function Home() {
                         ]}
                     />
                     <ServiceBlock
+                        disabled={true}
                         serviceName="授業"
-                        disabled={true}
+                        icon={<IoIosSchool className="h-10 w-10" />}
+                        url=""
                         textContent={["Comming Soon..."]}
                     />
                     <ServiceBlock
+                        disabled={true}
                         serviceName="バイト"
-                        disabled={true}
+                        icon={<FaPersonDigging className="h-10 w-10" />}
+                        url=""
                         textContent={["Comming Soon..."]}
                     />
                     <ServiceBlock
-                        serviceName="ご飯"
                         disabled={true}
+                        serviceName="ご飯"
+                        icon={<PiForkKnife className="h-10 w-10" />}
+                        url=""
                         textContent={["Comming Soon..."]}
                     />
                 </div>
