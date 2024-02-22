@@ -8,6 +8,7 @@ import { Analytics } from "@vercel/analytics/react";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+    manifest: "/manifest.json",
     title: "SHINDAI HUB",
     description: "Hack Kobe.Uni",
 };
@@ -19,6 +20,11 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
+            <head>
+                <link rel="manifest" href="/manifest.json" />
+                <link rel="apple-touch-icon" href="/icon-192x192.png"></link>
+                <meta name="theme-color" content="#b8e986" />
+            </head>
             <body className={inter.className}>
                 <UserProvider>{children}</UserProvider>
                 <Analytics />
