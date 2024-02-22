@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState, useEffect } from 'react';
+import { IoMdDownload } from "react-icons/io";
 
 const InstallButton = () => {
     const [deferredPrompt, setDeferredPrompt] = useState<Event | null>(null);
@@ -34,13 +35,11 @@ const InstallButton = () => {
   
     return (
         <button
-        className="bg-gray-300 text-xs md:text-base hover:bg-blue-400 text-gray-800 font-bold py-2 px-2 rounded inline-flex items-center justify-center"
+        className="bg-bluenormal text-xs sm:text-base text-gray-800 font-bold py-2 px-2 rounded inline-flex items-center justify-center"
         onClick={handleInstall}
       >
-        <svg className="fill-current w-4 h-4 mr-2 content-center" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-          <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/>
-        </svg>
-        <span className="hidden sm:inline-block">アプリインストール</span>
+        <IoMdDownload className="text-white"/>
+        <span className="xs:inline-block mx-1 text-white">アプリインストール</span>
       </button>
     );
   };
@@ -56,7 +55,7 @@ export default function Header() {
                     className="object-contain"
                 />
             </div>
-            <div className="font-bold text-2xl p-5 text-blackcustum">
+            <div className="font-bold text-sm sm:text-2xl p-5 text-blackcustum">
                 SHINDAI HUB
             </div>
             <InstallButton />
