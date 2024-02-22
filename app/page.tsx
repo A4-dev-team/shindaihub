@@ -43,7 +43,7 @@ export default function Home() {
                     />
                     <ServiceBlock
                         disabled={true}
-                        serviceName="バイト"
+                        serviceName="教科書"
                         icon={<FaPersonDigging className="h-10 w-10" />}
                         url=""
                         textContent={["Comming Soon..."]}
