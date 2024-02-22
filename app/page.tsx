@@ -3,7 +3,7 @@ import Link from "next/link";
 import { IoHome } from "react-icons/io5";
 import { IoIosSchool } from "react-icons/io";
 import { PiForkKnife } from "react-icons/pi";
-import { FaPersonDigging } from "react-icons/fa6";
+import { FaBook } from "react-icons/fa";
 import Header from "./_components/header";
 import ServiceBlock from "./_components/serviceBlock";
 
@@ -43,8 +43,8 @@ export default function Home() {
                     />
                     <ServiceBlock
                         disabled={true}
-                        serviceName="バイト"
-                        icon={<FaPersonDigging className="h-10 w-10" />}
+                        serviceName="教科書"
+                        icon={<FaBook className="h-10 w-10" />}
                         url=""
                         textContent={["Comming Soon..."]}
                     />
