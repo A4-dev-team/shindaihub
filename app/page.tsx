@@ -4,6 +4,23 @@ import { HomeIcon } from "@heroicons/react/24/solid";
 import Header from "./_components/header";
 import ServiceBlock from "./_components/serviceBlock";
 
+const TestLoginComponent = ({ redirectTo }: { redirectTo: string }) => {
+    return (
+        <div className="border-black">
+            <Link href={`/callback?redirectTo=${redirectTo}`}>ログイン</Link>
+        </div>
+    );
+};
+const TestLoginComponent2 = ({ redirectTo }: { redirectTo: string }) => {
+    return (
+        <div className="border-black">
+            <Link href={`/api/auth/login?redirectTo=${redirectTo}`}>
+                ログイン
+            </Link>
+        </div>
+    );
+};
+
 export default function Home() {
     return (
         <div className="h-screen flex flex-col items-center bg-whitecustum">
@@ -48,6 +65,7 @@ export default function Home() {
                     />
                 </div>
             </div>
+            <TestLoginComponent2 redirectTo="https://shindaihub-rentalhouse.glide.page/" />
         </div>
     );
 }
