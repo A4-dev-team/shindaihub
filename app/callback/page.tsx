@@ -2,22 +2,23 @@
 
 import { useUser } from "@auth0/nextjs-auth0/client";
 import { useRouter, useSearchParams } from "next/navigation";
+import { useEffect } from "react";
 
-export default function CallbackLogin() {
-    const { user } = useUser();
+export default function CallbackAuth() {
+    const { user, isLoading } = useUser();
     const router = useRouter();
     const searchParams = useSearchParams();
-    const redirectTo = searchParams.get("redirectTo");
+    const redirect = searchParams.get("redirect") || "/";
 
-    if (user) {
-        // req.queryからredirectToを読み込んで、リダイレクト
-        if (redirectTo) {
-            router.push(redirectTo);
-        } else {
-            console.log("redirectTo:", redirectTo);
+    useEffect(() => {
+        if (!isLoading && !user) {
+            router.push(`api/auth/login?redirect=${redirect}`);
         }
-    } else {
-        // Auth0のログインページに飛ぶ
-        router.push("/api/auth/login");
+    }, [user, isLoading, redirect, router]);
+
+    if (isLoading) {
+        return <div>Now Loading...</div>;
     }
+
+    router.push(redirect);
 }

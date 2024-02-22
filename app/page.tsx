@@ -1,28 +1,9 @@
-import Link from "next/link";
-
 import { IoHome } from "react-icons/io5";
 import { IoIosSchool } from "react-icons/io";
 import { PiForkKnife } from "react-icons/pi";
 import { FaBook } from "react-icons/fa";
 import Header from "./_components/header";
 import ServiceBlock from "./_components/serviceBlock";
-
-const TestLoginComponent = ({ redirectTo }: { redirectTo: string }) => {
-    return (
-        <div className="border-black">
-            <Link href={`/callback?redirectTo=${redirectTo}`}>ログイン</Link>
-        </div>
-    );
-};
-const TestLoginComponent2 = ({ redirectTo }: { redirectTo: string }) => {
-    return (
-        <div className="border-black">
-            <Link href={`/api/auth/login?redirectTo=${redirectTo}`}>
-                ログイン
-            </Link>
-        </div>
-    );
-};
 
 export default function Home() {
     return (
@@ -45,7 +26,7 @@ export default function Home() {
                         disabled={false}
                         serviceName="賃貸"
                         icon={<IoHome className="h-10 w-10" />}
-                        url="https://shindaihub-rentalhouse.glide.page/"
+                        url="callback?redirect=https://shindaihub-rentalhouse.glide.page/"
                         textContent={[
                             "神戸大学生のための賃貸情報を掲載！",
                             "賃貸の口コミを確認できます！",
@@ -74,7 +55,6 @@ export default function Home() {
                     />
                 </div>
             </div>
-            <TestLoginComponent2 redirectTo="https://shindaihub-rentalhouse.glide.page/" />
         </div>
     );
 }
