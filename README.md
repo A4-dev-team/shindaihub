@@ -1,7 +1,7 @@
 # デザイン周りの決まり
 
 -   基本的に taliwindcss を使用する
--   アイコンは Heroicons を使用する
+-   アイコンは Reacticon を使用する
 -   色は以下の色ぞそれぞれカスタムカラーとして設定しているので極力その色を使う。
     -   blackcustum: "#121326",
     -   bluenormal: "#348ABF",
