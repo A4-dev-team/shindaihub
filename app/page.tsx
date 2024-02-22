@@ -37,7 +37,7 @@ export default function Home() {
                         textContent={["Comming Soon..."]}
                     />
                     <ServiceBlock
-                        serviceName="バイト"
+                        serviceName="教科書"
                         disabled={true}
                         textContent={["Comming Soon..."]}
                     />
