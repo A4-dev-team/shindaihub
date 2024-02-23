@@ -2,9 +2,9 @@
 
 import { useUser } from "@auth0/nextjs-auth0/client";
 import { useRouter, useSearchParams } from "next/navigation";
-import { useEffect } from "react";
+import { Suspense, useEffect } from "react";
 
-export default function CallbackAuth() {
+const CallbackAuth = () => {
     const { user, isLoading } = useUser();
     const router = useRouter();
     const searchParams = useSearchParams();
@@ -23,4 +23,12 @@ export default function CallbackAuth() {
     router.push(redirect);
 
     return null;
+};
+
+export default function CallbackPage() {
+    return (
+        <Suspense>
+            <CallbackAuth />
+        </Suspense>
+    );
 }
