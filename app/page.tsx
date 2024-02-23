@@ -1,4 +1,3 @@
-import { ReactElement } from "react";
 import { IoHome } from "react-icons/io5";
 import { IoIosSchool } from "react-icons/io";
 import { PiForkKnife } from "react-icons/pi";
