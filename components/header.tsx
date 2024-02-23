@@ -5,12 +5,14 @@ import { useState, useEffect } from "react";
 import { IoMdDownload } from "react-icons/io";
 import { IoIosClose } from "react-icons/io";
 import { IoShareOutline } from "react-icons/io5";
+import Link from "next/link";
 
 const InstallButton = () => {
     const [isInstalled, setIsInstalled] = useState<boolean>(false);
     const [isAvailable, setIsAvailable] = useState<boolean>(false);
     const [deferredPrompt, setDeferredPrompt] = useState<Event | null>(null);
     const [showModal, setShowModal] = useState<boolean>(false);
+    const url="https://kobe-uni-hub.vercel.app/"
 
     useEffect(() => {
         const handler = (e: Event) => {
@@ -70,17 +72,21 @@ const InstallButton = () => {
                         </div>
                         <div className="mb-3">
                             <p className="text-base">
-                                iPhoneの方は以下の方法でインストールしてください
+                                【iPhoneの方】
                             </p>
                             <ol className="list-decimal list-inside my-2">
                                 <li>
-                                    画面下部の
+                                    safariで<Link href={url}>{url}</Link>を開いて、画面下部の
                                     <IoShareOutline className="inline" />
                                     をタップ
                                 </li>
                                 <li>「ホーム画面に追加」をタップ</li>
                                 <li>「追加」をタップし、完了</li>
                             </ol>
+                            <p className="text-base mt-3">
+                              【Androidの方】
+                            </p>
+                                Chromeで<Link href={url}>{url}</Link>開いて、同じようにインストールボタンを押してください
                         </div>
                         <div className="text-xs">
                             ※インストール済みの方も表示されています。その他の不具合は公式instagramからご連絡ください。
