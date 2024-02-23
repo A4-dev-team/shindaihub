@@ -2,76 +2,60 @@ import { ArrowRightCircleIcon } from "@heroicons/react/16/solid";
 import Link from "next/link";
 import { ReactElement, cloneElement } from "react";
 
-type ServiceBlockProps = {
+export type ServiceBlockProps = {
     serviceName: string;
     url: string;
     IconElement: ReactElement;
-    textContent: string[]; // テキストコンテンツを配列として受け取る
+    textContent: string[];
+    isDisabled?: boolean;
 };
 
-// TODO: h-40?とかに固定して見た目整える
 export const ServiceBlock = (props: ServiceBlockProps) => {
-    const { serviceName, url, IconElement, textContent } = props;
-    return (
-        <Link
-            href={url}
-            className="flex flex-col space-y-3 p-4 group transition duration-300 hover:bg-bluenormal bg-white rounded-xl"
-        >
-            <div className="flex justify-between items-center">
-                <div className="flex items-center space-x-2">
-                    {cloneElement(IconElement, {
-                        className:
-                            "h-5 w-5 text-bluenormal transition duration-300 group-hover:text-white",
-                    })}
-                    <div className="font-bold text-xl transition duration-300 group-hover:text-white">
-                        {serviceName}
-                    </div>
-                </div>
-                <ArrowRightCircleIcon className="h-5 w-5 text-bluenormal transition duration-300 group-hover:text-white group-hover:translate-x-2" />
-            </div>
-            <div>
-                {textContent.map((text, index) => {
-                    return (
-                        <span
-                            key={index}
-                            className="text-xs lg:text-base text-slate-500 transition duration-300 group-hover:text-white"
-                        >
-                            {text}
-                        </span>
-                    );
-                })}
-            </div>
-        </Link>
-    );
-};
+    const {
+        serviceName,
+        url,
+        IconElement,
+        textContent,
+        isDisabled = false,
+    } = props;
 
-export const ServiceBlockDisabled = (props: ServiceBlockProps) => {
-    const { serviceName, url, IconElement, textContent } = props;
+    const transitionText = "transition duration-300 group-hover:text-white";
+    const TransitionBg = "group transition duration-300 hover:bg-bluenormal";
+
+    const linkClassName = `flex flex-col space-y-3 p-4 rounded-xl bg-white ${
+        isDisabled ? "pointer-events-none" : TransitionBg
+    }`;
+    const iconClassName = `h-5 w-5 text-bluenormal ${
+        isDisabled ? "" : transitionText
+    }`;
+    const serviceNameClassName = `font-bold text-xl ${
+        isDisabled ? "" : transitionText
+    }`;
+    const textClassName = `text-xs lg:text-base text-slate-500 ${
+        isDisabled ? "" : transitionText
+    }`;
+
     return (
-        <Link
-            href={url}
-            className="flex flex-col space-y-3 p-4 bg-white rounded-xl pointer-events-none"
-        >
+        <Link href={url} className={linkClassName}>
             <div className="flex justify-between items-center">
                 <div className="flex items-center space-x-2">
                     {cloneElement(IconElement, {
-                        className: "h-5 w-5 text-bluenormal",
+                        className: iconClassName,
                     })}
-                    <div className="font-bold text-xl">{serviceName}</div>
+                    <div className={serviceNameClassName}>{serviceName}</div>
                 </div>
-                <ArrowRightCircleIcon className="h-5 w-5 text-bluenormal" />
+                <ArrowRightCircleIcon
+                    className={`${iconClassName} ${
+                        isDisabled ? "" : "group-hover:translate-x-2"
+                    }`}
+                />
             </div>
             <div>
-                {textContent.map((text, index) => {
-                    return (
-                        <span
-                            key={index}
-                            className="text-xs lg:text-base text-slate-500"
-                        >
-                            {text}
-                        </span>
-                    );
-                })}
+                {textContent.map((text, index) => (
+                    <span key={index} className={textClassName}>
+                        {text}
+                    </span>
+                ))}
             </div>
         </Link>
     );
