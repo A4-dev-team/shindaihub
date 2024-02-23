@@ -51,7 +51,7 @@ const serviceBlockPropsList: serviceBlockPropsListType[] = [
 
 export default function Home() {
     return (
-        <div className="flex flex-col items-center bg-whitecustum">
+        <div className="h-screen flex flex-col items-center bg-whitecustum">
             <Header />
             <div className="container flex flex-col w-full py-24 px-16 space-y-20">
                 <div className="flex flex-col space-y-3 text-blackcustum">
