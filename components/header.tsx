@@ -12,7 +12,7 @@ const InstallButton = () => {
     const [isAvailable, setIsAvailable] = useState<boolean>(false);
     const [deferredPrompt, setDeferredPrompt] = useState<Event | null>(null);
     const [showModal, setShowModal] = useState<boolean>(false);
-    const url="https://kobe-uni-hub.vercel.app/"
+    const url = process.env.AUTH0_BASE_URL || "http://localhost:3000";
 
     useEffect(() => {
         const handler = (e: Event) => {
@@ -53,7 +53,9 @@ const InstallButton = () => {
     return (
         <>
             <button
-                className={`${isInstalled ? "bg-slate-300" : "bg-bluenormal"} text-xs sm:text-base text-gray-800 font-bold py-2 px-2 rounded inline-flex items-center justify-center`}
+                className={`${
+                    isInstalled ? "bg-slate-300" : "bg-bluenormal"
+                } text-xs sm:text-base text-gray-800 font-bold py-2 px-2 rounded inline-flex items-center justify-center`}
                 onClick={handleButtonClick}
             >
                 <IoMdDownload className="text-white" />
@@ -71,22 +73,26 @@ const InstallButton = () => {
                             />
                         </div>
                         <div className="mb-3">
-                            <p className="text-base">
-                                【iPhoneの方】
-                            </p>
+                            <p className="text-base">【iPhoneの方】</p>
                             <ol className="list-decimal list-inside my-2">
                                 <li>
-                                    safariで<Link href={url} className="text-blue-600">{url}</Link>を開いて、画面下部の
+                                    safariで
+                                    <Link href={url} className="text-blue-600">
+                                        {url}
+                                    </Link>
+                                    を開いて、画面下部の
                                     <IoShareOutline className="inline" />
                                     をタップ
                                 </li>
                                 <li>「ホーム画面に追加」をタップ</li>
                                 <li>「追加」をタップし、完了</li>
                             </ol>
-                            <p className="text-base mt-3">
-                              【Androidの方】
-                            </p>
-                                Chromeで<Link href={url} className="text-blue-600">{url}</Link>開いて、同じようにインストールボタンを押してください
+                            <p className="text-base mt-3">【Androidの方】</p>
+                            Chromeで
+                            <Link href={url} className="text-blue-600">
+                                {url}
+                            </Link>
+                            開いて、同じようにインストールボタンを押してください
                         </div>
                         <div className="text-xs">
                             ※インストール済みの方も表示されています。その他の不具合は公式instagramからご連絡ください。
