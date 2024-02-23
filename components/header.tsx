@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
 import Image from "next/image";
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 import { IoMdDownload } from "react-icons/io";
 import { IoIosClose } from "react-icons/io";
 import { IoShareOutline } from "react-icons/io5";
@@ -47,7 +47,7 @@ const InstallButton = () => {
             setDeferredPrompt(null)
         }
     };
-  
+
     return (
       <>
         <button className={"bg-bluenormal text-xs sm:text-base text-gray-800 font-bold py-2 px-2 rounded inline-flex items-center justify-center"}
