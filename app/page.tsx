@@ -23,7 +23,7 @@ const serviceBlockPropsList: serviceBlockPropsListType[] = [
         IconElement: <IoHome />,
         textContent: [
             "神戸大学生のための賃貸情報を掲載！",
-            "実際住んでいる先輩の口コミを確認できます！",
+            "実際に住んでいる先輩の口コミを確認できます！",
         ],
     },
     {
@@ -51,7 +51,7 @@ const serviceBlockPropsList: serviceBlockPropsListType[] = [
 
 export default function Home() {
     return (
-        <div className="h-screen flex flex-col items-center bg-whitecustum">
+        <div className="flex flex-col items-center bg-whitecustum">
             <Header />
             <div className="container flex flex-col w-full py-24 px-16 space-y-20">
                 <div className="flex flex-col space-y-3 text-blackcustum">
