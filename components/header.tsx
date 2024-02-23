@@ -71,7 +71,7 @@ const InstallButton = () => {
                 </ol>
               </div>
               <div className="text-xs">
-                ※インストール済みの方も表示されています
+                ※インストール済みの方も表示されています。その他の不具合は公式instagramからご連絡ください。
               </div>
             </div>
         </div>
