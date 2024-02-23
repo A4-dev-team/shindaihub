@@ -48,12 +48,10 @@ const InstallButton = () => {
         }
     };
 
-    const installButtonColor = isInstalled ? "bg-gray" : "bg-bluenormal";
-
     return (
         <>
             <button
-                className={`${installButtonColor} text-xs sm:text-base text-gray-800 font-bold py-2 px-2 rounded inline-flex items-center justify-center`}
+                className={`${isInstalled ? "bg-slate-300" : "bg-bluenormal"} text-xs sm:text-base text-gray-800 font-bold py-2 px-2 rounded inline-flex items-center justify-center`}
                 onClick={handleButtonClick}
             >
                 <IoMdDownload className="text-white" />
