@@ -13,4 +13,14 @@ export const GET = handleAuth({
             returnTo: returnTo || "/",
         });
     },
+    signup: (req: NextRequest, ctx: AppRouteHandlerFnContext) => {
+        const searchParams = req.nextUrl.searchParams;
+        const returnTo = searchParams.get("redirect");
+        return handleLogin(req, ctx, {
+            authorizationParams: {
+                screen_hint: "signup",
+            },
+            returnTo: returnTo || "/",
+        });
+    },
 });
