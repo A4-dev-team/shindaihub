@@ -76,7 +76,7 @@ const InstallButton = () => {
                             </p>
                             <ol className="list-decimal list-inside my-2">
                                 <li>
-                                    safariで<Link href={url}>{url}</Link>を開いて、画面下部の
+                                    safariで<Link href={url} className="text-blue-600">{url}</Link>を開いて、画面下部の
                                     <IoShareOutline className="inline" />
                                     をタップ
                                 </li>
@@ -86,7 +86,7 @@ const InstallButton = () => {
                             <p className="text-base mt-3">
                               【Androidの方】
                             </p>
-                                Chromeで<Link href={url}>{url}</Link>開いて、同じようにインストールボタンを押してください
+                                Chromeで<Link href={url} className="text-blue-600">{url}</Link>開いて、同じようにインストールボタンを押してください
                         </div>
                         <div className="text-xs">
                             ※インストール済みの方も表示されています。その他の不具合は公式instagramからご連絡ください。
