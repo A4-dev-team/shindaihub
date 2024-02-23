@@ -21,4 +21,6 @@ export default function CallbackAuth() {
     }
 
     router.push(redirect);
+
+    return null;
 }
