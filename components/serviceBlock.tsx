@@ -19,11 +19,11 @@ export const ServiceBlock = (props: ServiceBlockProps) => {
         isDisabled = false,
     } = props;
 
+    const transitionBg = "transition duration-300 hover:bg-bluenormal";
     const transitionText = "transition duration-300 group-hover:text-white";
-    const TransitionBg = "group transition duration-300 hover:bg-bluenormal";
 
-    const linkClassName = `flex flex-col space-y-3 p-4 rounded-xl bg-white ${
-        isDisabled ? "pointer-events-none" : TransitionBg
+    const linkClassName = `flex flex-col space-y-3 p-4 rounded-xl bg-white group ${
+        isDisabled ? "pointer-events-none" : transitionBg
     }`;
     const iconClassName = `h-5 w-5 text-bluenormal ${
         isDisabled ? "" : transitionText
