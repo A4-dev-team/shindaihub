@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { UserProvider } from "@auth0/nextjs-auth0/client";
 import "./globals.css";
 
 import { Analytics } from "@vercel/analytics/react";
@@ -25,7 +26,7 @@ export default function RootLayout({
                 <meta name="theme-color" content="#b8e986" />
             </head>
             <body className={inter.className}>
-                {children}
+                <UserProvider>{children}</UserProvider>
                 <Analytics />
             </body>
         </html>
