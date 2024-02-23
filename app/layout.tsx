@@ -23,7 +23,7 @@ export default function RootLayout({
             <head>
                 <link rel="manifest" href="/manifest.json" />
                 <link rel="apple-touch-icon" href="/icon-192x192.png"></link>
-                <meta name="theme-color" content="#b8e986" />
+                <meta name="theme-color" content="#348ABF" />
             </head>
             <body className={inter.className}>
                 <UserProvider>{children}</UserProvider>

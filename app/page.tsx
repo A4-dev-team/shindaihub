@@ -23,7 +23,7 @@ const serviceBlockPropsList: serviceBlockPropsListType[] = [
         IconElement: <IoHome />,
         textContent: [
             "神戸大学生のための賃貸情報を掲載！",
-            "賃貸の口コミを確認できます！",
+            "実際住んでいる先輩の口コミを確認できます！",
         ],
     },
     {
