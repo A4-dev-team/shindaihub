@@ -1,23 +1,13 @@
-import { ReactElement } from "react";
 import { IoHome } from "react-icons/io5";
 import { IoIosSchool } from "react-icons/io";
 import { PiForkKnife } from "react-icons/pi";
 import { FaBook } from "react-icons/fa";
 import Header from "@/components/header";
-import { ServiceBlock, ServiceBlockDisabled } from "@/components/serviceBlock";
-
-type serviceBlockPropsListType = {
-    disabled: boolean;
-    serviceName: string;
-    url: string;
-    IconElement: ReactElement;
-    textContent: string[];
-};
+import { ServiceBlock, ServiceBlockProps } from "@/components/serviceBlock";
 
 // サービス追加する時はここに追加
-const serviceBlockPropsList: serviceBlockPropsListType[] = [
+const serviceBlockPropsList: ServiceBlockProps[] = [
     {
-        disabled: false,
         serviceName: "賃貸",
         url: "callback?redirect=https://shindaihub-rentalhouse.glide.page/",
         IconElement: <IoHome />,
@@ -27,25 +17,25 @@ const serviceBlockPropsList: serviceBlockPropsListType[] = [
         ],
     },
     {
-        disabled: true,
         serviceName: "授業",
         url: "#",
         IconElement: <IoIosSchool />,
         textContent: ["Comming Soon..."],
+        isDisabled: true,
     },
     {
-        disabled: true,
         serviceName: "教科書",
         url: "#",
         IconElement: <FaBook />,
         textContent: ["Comming Soon..."],
+        isDisabled: true,
     },
     {
-        disabled: true,
         serviceName: "ご飯",
         url: "#",
         IconElement: <PiForkKnife />,
         textContent: ["Comming Soon..."],
+        isDisabled: true,
     },
 ];
 
@@ -65,30 +55,21 @@ export default function Home() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-10">
                     {serviceBlockPropsList.map((props, index) => {
                         const {
-                            disabled,
                             serviceName,
                             url,
                             IconElement,
                             textContent,
+                            isDisabled,
                         } = props;
                         return (
-                            <div key={index}>
-                                {disabled ? (
-                                    <ServiceBlockDisabled
-                                        serviceName={serviceName}
-                                        url={url}
-                                        IconElement={IconElement}
-                                        textContent={textContent}
-                                    />
-                                ) : (
-                                    <ServiceBlock
-                                        serviceName={serviceName}
-                                        url={url}
-                                        IconElement={IconElement}
-                                        textContent={textContent}
-                                    />
-                                )}
-                            </div>
+                            <ServiceBlock
+                                key={index}
+                                serviceName={serviceName}
+                                url={url}
+                                IconElement={IconElement}
+                                textContent={textContent}
+                                isDisabled={isDisabled}
+                            />
                         );
                     })}
                 </div>
