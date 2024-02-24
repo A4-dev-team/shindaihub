@@ -12,7 +12,7 @@ const InstallButton = () => {
     const [isAvailable, setIsAvailable] = useState<boolean>(false);
     const [deferredPrompt, setDeferredPrompt] = useState<Event | null>(null);
     const [showModal, setShowModal] = useState<boolean>(false);
-    const url = process.env.AUTH0_BASE_URL || "http://localhost:3000";
+    const url = "https://kobe-uni-hub.vercel.app/"
 
     useEffect(() => {
         const handler = (e: Event) => {
