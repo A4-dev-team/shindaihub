@@ -1,7 +1,7 @@
 import { IoHome } from "react-icons/io5";
 import { IoIosSchool } from "react-icons/io";
 import { PiForkKnife } from "react-icons/pi";
-import { FaBook } from "react-icons/fa";
+import { FaBook, FaMapMarkedAlt } from "react-icons/fa";
 import { ServiceBlock, ServiceBlockProps } from "@/components/serviceBlock";
 
 // サービス追加する時はここに追加
@@ -35,6 +35,13 @@ const serviceBlockPropsList: ServiceBlockProps[] = [
         IconElement: <PiForkKnife />,
         textContent: ["Comming Soon..."],
         isDisabled: true,
+    },
+    {
+        serviceName: "学内マップ",
+        url: "/campus-map",
+        IconElement: <FaMapMarkedAlt />,
+        textContent: ["検索機能付の学内マップです"],
+        isDisabled: false,
     },
 ];
 
