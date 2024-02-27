@@ -179,7 +179,7 @@ const MapImage = (props: MapImageProps) => {
 
             {isHit ? (
                 <FaMapMarkerAlt
-                    className="h-8 w-8 text-red-500 absolute animate-bounce"
+                    className="h-8 w-8 hidden md:block text-red-500 absolute animate-bounce"
                     style={{ top: `${positionY}px`, left: `${positionX}px` }}
                 />
             ) : null}
