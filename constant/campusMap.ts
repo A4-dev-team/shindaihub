@@ -13,19 +13,19 @@ const campusList: readonly Campus[] = Object.freeze([
         campusId: 1,
         areaName: "六甲台地区",
         campusName: "六甲台第１キャンパス",
-        mapUrl: "/map_turukabuto_1.png",
+        mapUrl: "/map_rokkoudai_1.png",
     },
     {
         campusId: 2,
         areaName: "六甲台地区",
         campusName: "六甲台第２キャンパス",
-        mapUrl: "/map_turukabuto_1.png",
+        mapUrl: "/map_rokkoudai_2.png",
     },
     {
         campusId: 4,
         areaName: "六甲台地区",
         campusName: "鶴甲第２キャンパス",
-        mapUrl: "/map_turukabuto_1.png",
+        mapUrl: "/map_turukabuto_2.png",
     },
 ]);
 
