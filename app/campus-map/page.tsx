@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { FaMapPin } from "react-icons/fa";
+import { FaMapMarkerAlt } from "react-icons/fa";
 import { Building } from "@/types";
 import { constant } from "@/constant";
 import { useState } from "react";
@@ -178,8 +178,8 @@ const MapImage = (props: MapImageProps) => {
             )}
 
             {isHit ? (
-                <FaMapPin
-                    className="h-8 w-8 text-yellow-300 absolute animate-bounce"
+                <FaMapMarkerAlt
+                    className="h-8 w-8 text-red-500 absolute animate-bounce"
                     style={{ top: `${positionY}px`, left: `${positionX}px` }}
                 />
             ) : null}
