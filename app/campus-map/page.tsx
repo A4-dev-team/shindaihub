@@ -2,10 +2,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FaMapPin } from "react-icons/fa";
-import { Building } from "@/types";
+import { Building, Campus } from "@/types";
 import { constant } from "@/constant";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useForm, Controller } from "react-hook-form";
+import { SkeltonImage } from "@/components/SkeltonImage";
 
 // Types
 type BuildingSearchStateType = {
@@ -25,7 +26,7 @@ type MapImageProps = BuildingSearchResultType;
 
 // Utility functions
 const getCampusById = (id: number) => {
-    return constant.campusList.find((campus) => campus.campusId === id);
+    return constant.campusList.find((campus) => campus.campusId == id);
 };
 const findBuildingByKeyword = (campusId: number, keyword: string) => {
     const buildingsInCampus = constant.buildingList.filter(
@@ -39,14 +40,16 @@ const findBuildingByKeyword = (campusId: number, keyword: string) => {
 // Components
 const BuildingSearchForm = (props: BuildingSearchFormProps) => {
     const { setResult } = props;
-    const defaultSelectedCampusId = 0;
     const {
         formState: { isValid },
         handleSubmit,
         control,
     } = useForm<BuildingSearchFormInputType>({
         mode: "onSubmit",
-        defaultValues: { campusId: defaultSelectedCampusId, keyword: "" },
+        defaultValues: {
+            campusId: constant.campusList[0].campusId,
+            keyword: "",
+        },
     });
 
     const onSubmit = (data: BuildingSearchFormInputType) => {
@@ -61,6 +64,7 @@ const BuildingSearchForm = (props: BuildingSearchFormProps) => {
         } else {
             setResult((prev) => ({
                 ...prev,
+                campusId: data.campusId,
                 isHit: false,
                 isInit: false,
             }));
@@ -87,9 +91,6 @@ const BuildingSearchForm = (props: BuildingSearchFormProps) => {
                         onChange={field.onChange}
                         onBlur={field.onBlur}
                     >
-                        <option value={defaultSelectedCampusId}>
-                            キャンパス名を選択してください
-                        </option>
                         {constant.campusList.map((campus) => {
                             return (
                                 <option
@@ -164,13 +165,18 @@ const MapImage = (props: MapImageProps) => {
 
     return (
         <div className="relative">
-            <Image
-                src={campus!.mapUrl}
-                alt="campus_map"
-                width={750}
-                height={750}
-                className="rounded-sm"
-            />
+            {campus ? (
+                <Image
+                    src={campus.mapUrl}
+                    alt="campus_map"
+                    width={750}
+                    height={750}
+                    className="rounded-sm"
+                />
+            ) : (
+                <SkeltonImage width={750} height={750} />
+            )}
+
             {isHit ? (
                 <FaMapPin
                     className="h-8 w-8 text-yellow-300 absolute animate-bounce"
