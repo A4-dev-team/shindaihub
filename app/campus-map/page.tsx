@@ -2,9 +2,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FaMapPin } from "react-icons/fa";
-import { Building, Campus } from "@/types";
+import { Building } from "@/types";
 import { constant } from "@/constant";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useForm, Controller } from "react-hook-form";
 import { SkeltonImage } from "@/components/SkeltonImage";
 
