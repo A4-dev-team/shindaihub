@@ -1,34 +1,34 @@
 "use client";
-import Image from "next/image";
 import Link from "next/link";
-import { FaMapMarkerAlt } from "react-icons/fa";
-import { Building } from "@/types";
-import { constant } from "@/constant";
-import { useState } from "react";
+import { useSearchParams, useRouter } from "next/navigation";
 import { useForm, Controller } from "react-hook-form";
-import { SkeltonImage } from "@/components/SkeltonImage";
+import { constant } from "@/constant";
 
 // Types
-type BuildingSearchStateType = {
-    isInit: boolean;
-    isHit: boolean;
-};
-type BuildingSearchResultType = Building & BuildingSearchStateType;
 type BuildingSearchFormInputType = {
     campusId: number;
     keyword: string;
 };
-type BuildingSearchFormProps = {
-    setResult: React.Dispatch<React.SetStateAction<BuildingSearchResultType>>;
+type BuildingSearchFormProps = BuildingSearchFormInputType;
+type BuildingSearchResultCardProps = {
+    isHit: boolean;
+    campusName?: string;
+    mapImageUrl?: string;
+    buildingId?: number;
+    buildingName?: string;
 };
-type BuildingSearchResultCardProps = BuildingSearchResultType;
-type MapImageProps = BuildingSearchResultType;
+type GoogleMapIFrameProps = {
+    lat: number;
+    lng: number;
+    q?: string;
+};
 
 // Utility functions
 const getCampusById = (id: number) => {
     return constant.campusList.find((campus) => campus.campusId == id);
 };
 const findBuildingByKeyword = (campusId: number, keyword: string) => {
+    if (keyword == "") return;
     const buildingsInCampus = constant.buildingList.filter(
         (building) => building.campusId == campusId
     );
@@ -39,7 +39,8 @@ const findBuildingByKeyword = (campusId: number, keyword: string) => {
 
 // Components
 const BuildingSearchForm = (props: BuildingSearchFormProps) => {
-    const { setResult } = props;
+    const { campusId, keyword } = props;
+    const router = useRouter();
     const {
         formState: { isValid },
         handleSubmit,
@@ -47,28 +48,15 @@ const BuildingSearchForm = (props: BuildingSearchFormProps) => {
     } = useForm<BuildingSearchFormInputType>({
         mode: "onSubmit",
         defaultValues: {
-            campusId: constant.campusList[0].campusId,
-            keyword: "",
+            campusId,
+            keyword,
         },
     });
 
     const onSubmit = (data: BuildingSearchFormInputType) => {
-        const hitBuilding = findBuildingByKeyword(data.campusId, data.keyword);
-        if (hitBuilding) {
-            const result: BuildingSearchResultType = {
-                ...hitBuilding,
-                isHit: true,
-                isInit: false,
-            };
-            setResult(result);
-        } else {
-            setResult((prev) => ({
-                ...prev,
-                campusId: data.campusId,
-                isHit: false,
-                isInit: false,
-            }));
-        }
+        router.push(
+            `/campus-map?campusId=${data.campusId}&keyword=${data.keyword}`
+        );
     };
 
     const buttonColor = isValid
@@ -113,6 +101,7 @@ const BuildingSearchForm = (props: BuildingSearchFormProps) => {
                         type="text"
                         className="w-2/3 md:grow block py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                         placeholder="キーワードを入力"
+                        value={field.value}
                         onChange={field.onChange}
                         onBlur={field.onBlur}
                     />
@@ -130,25 +119,24 @@ const BuildingSearchForm = (props: BuildingSearchFormProps) => {
 };
 
 const SearchBuildingResultCard = (props: BuildingSearchResultCardProps) => {
-    const { buildingId, campusId, buildingName, pictureUrl, isInit, isHit } =
-        props;
-
-    if (isInit) return;
-
-    const campus = getCampusById(campusId);
+    const { campusName, buildingName, buildingId, mapImageUrl, isHit } = props;
 
     return (
         <div className="w-full border rounded-lg border-bluenormal bg-white p-6">
             <div className="flex flex-col space-y-4">
                 <div className="text-2xl font-semibold">建物詳細</div>
                 {isHit ? (
-                    <div>
-                        <div>キャンパス名: {campus!.campusName}</div>
+                    <div className="flex flex-col space-y-1">
+                        <div>キャンパス名: {campusName}</div>
                         <div>建物名: {buildingName}</div>
-                        <div>番号: {buildingId}</div>
                         <div>
-                            正面画像URL:
-                            <Link href={pictureUrl}>{pictureUrl}</Link>
+                            イラストマップ:{" "}
+                            <Link
+                                href={mapImageUrl || "#"}
+                                className="underline text-blue-800"
+                            >
+                                {campusName} {buildingId}番
+                            </Link>
                         </div>
                     </div>
                 ) : (
@@ -159,51 +147,58 @@ const SearchBuildingResultCard = (props: BuildingSearchResultCardProps) => {
     );
 };
 
-const MapImage = (props: MapImageProps) => {
-    const { campusId, positionX, positionY, isHit } = props;
-    const campus = getCampusById(campusId);
+const GoogleMapIFrame = (props: GoogleMapIFrameProps) => {
+    const { lat, lng, q } = props;
+    const center = `${lat}, ${lng}`;
 
     return (
-        <div className="relative">
-            {campus ? (
-                <Image
-                    src={campus.mapUrl}
-                    alt="campus_map"
-                    width={750}
-                    height={750}
-                    className="rounded-sm"
-                />
-            ) : (
-                <SkeltonImage width={750} height={750} />
-            )}
-
-            {isHit ? (
-                <FaMapMarkerAlt
-                    className="h-8 w-8 hidden md:block text-red-500 absolute animate-bounce"
-                    style={{ top: `${positionY}px`, left: `${positionX}px` }}
-                />
-            ) : null}
+        <div className="w-full">
+            <iframe
+                width="100%"
+                height="600px"
+                style={{ border: 0 }}
+                loading="lazy"
+                allowFullScreen
+                referrerPolicy="no-referrer-when-downgrade"
+                src={`https://www.google.com/maps/embed/v1/place?key=${
+                    process.env.NEXT_PUBLIC_GOOGLE_MAP_API_KEY
+                }&q=${q || center}&center=${center}&zoom=18`}
+            ></iframe>
         </div>
     );
 };
 
 export default function Page() {
-    const [searchResult, setSearchResult] = useState<BuildingSearchResultType>({
-        buildingId: 0,
-        campusId: constant.campusList[0].campusId,
-        buildingName: "",
-        positionX: 0,
-        positionY: 0,
-        pictureUrl: "#",
-        isHit: false,
-        isInit: true,
-    });
+    const searchParams = useSearchParams();
+    const campusId = parseInt(searchParams.get("campusId") || "3");
+    const keyword = searchParams.get("keyword") || "";
+
+    const isFirstRendering = !searchParams.has("keyword");
+
+    const building = findBuildingByKeyword(campusId, keyword);
+    const campus = getCampusById(campusId);
+
+    if (!campus) {
+        throw Error("campusIdが見つかりません。");
+    }
 
     return (
-        <div className="flex flex-col items-center py-6 space-y-4 md:px-0 px-4">
-            <BuildingSearchForm setResult={setSearchResult} />
-            <SearchBuildingResultCard {...searchResult} />
-            <MapImage {...searchResult} />
+        <div className="container flex flex-col max-w-3xl items-center py-6 space-y-4 px-4">
+            <BuildingSearchForm campusId={campusId} keyword={keyword} />
+            {isFirstRendering ? null : (
+                <SearchBuildingResultCard
+                    isHit={!!building}
+                    campusName={campus.campusName}
+                    mapImageUrl={campus.mapImageUrl}
+                    buildingId={building?.buildingId}
+                    buildingName={building?.buildingName}
+                />
+            )}
+            <GoogleMapIFrame
+                lat={building ? building.lat : campus.lat}
+                lng={building ? building.lng : campus.lng}
+                q={building ? undefined : campus.campusName}
+            />
         </div>
     );
 }
