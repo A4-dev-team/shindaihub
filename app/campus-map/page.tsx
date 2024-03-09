@@ -26,7 +26,6 @@ export default function Page() {
             <BuildingSearchForm campusId={campusId} keyword={keyword} />
             {!isFirstRendering && (
                 <BuildingSearchResultCard
-                    isHit={!!building}
                     campusName={campus.campusName}
                     mapImageUrl={campus.mapImageUrl}
                     buildingId={building?.buildingId}

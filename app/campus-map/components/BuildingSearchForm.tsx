@@ -1,34 +1,27 @@
-import { useRouter } from "next/navigation";
 import { Controller } from "react-hook-form";
 import { constant } from "@/constant";
-import { useBuildingSearch } from "../hooks";
+import {
+    useBuildingSearchForm,
+    useBuildingSuggestion,
+    useSubmitBuildingSearchForm,
+} from "../hooks";
+import { BuildingSearchFormInputType } from "../types";
 
-type BuildingSearchFormInputType = {
-    campusId: number;
-    keyword: string;
-};
-
-type BuildingSearchFormProps = BuildingSearchFormInputType;
-
-const BuildingSearchForm = (props: BuildingSearchFormProps) => {
+const BuildingSearchForm = (props: BuildingSearchFormInputType) => {
     const { campusId, keyword } = props;
-    const {
-        isValid,
-        control,
-        handleSubmit,
-        setValue,
-        buildingSuggestions,
-        isShowSuggestions,
-        setIsShowSuggestions,
-    } = useBuildingSearch({ campusId, keyword });
+    const { isValid, control, handleSubmit, setValue, watch } =
+        useBuildingSearchForm({ campusId, keyword });
 
-    const router = useRouter();
+    const watchCampusId = watch("campusId");
+    const watchKeyword = watch("keyword");
 
-    const onSubmit = (data: BuildingSearchFormInputType) => {
-        router.push(
-            `/campus-map?campusId=${data.campusId}&keyword=${data.keyword}`
-        );
-    };
+    const { buildingSuggestions, isShowSuggestions, setIsShowSuggestions } =
+        useBuildingSuggestion({
+            campusId: watchCampusId,
+            keyword: watchKeyword,
+        });
+
+    const { onSubmit } = useSubmitBuildingSearchForm();
 
     const buttonColor = isValid
         ? "bg-indigo-500 hover:bg-indigo-700 focus:ring-indigo-400"
@@ -72,7 +65,7 @@ const BuildingSearchForm = (props: BuildingSearchFormProps) => {
                         <input
                             type="text"
                             className="w-full block py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                            placeholder="キーワードを入力"
+                            placeholder="例：〇〇棟"
                             value={field.value}
                             onChange={field.onChange}
                             onBlur={() => setIsShowSuggestions(false)}
@@ -113,4 +106,4 @@ const BuildingSearchForm = (props: BuildingSearchFormProps) => {
     );
 };
 
-export { type BuildingSearchFormInputType, BuildingSearchForm };
+export { BuildingSearchForm };
