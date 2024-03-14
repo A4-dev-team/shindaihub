@@ -119,7 +119,7 @@ const Menu = () => {
     return(
         <>
             {isOpen && (
-                <div className={`fixed top-0 left-0 w-full h-full bg-gray-900 bg-opacity-75 flex items-center justify-center ${isOpen ? '' : 'hidden'}`}>
+                <div className={`fixed top-0 left-0 w-full h-full z-50 bg-gray-900 bg-opacity-75 flex items-center justify-center ${isOpen ? '' : 'hidden'}`}>
                     <ul className="flex flex-col gap-10 text-xl text-white my-4">
                         <li className="flex items-center hover:text-bluenormal">
                             <IoHome />
