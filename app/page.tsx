@@ -17,10 +17,12 @@ const serviceBlockPropsList: ServiceBlockProps[] = [
     },
     {
         serviceName: "授業",
-        url: "#",
+        url: "callback?redirect=https://shindaihub-class.glide.page",
         IconElement: <IoIosSchool />,
-        textContent: ["Comming Soon..."],
-        isDisabled: true,
+        textContent: [
+            "神大生のための授業情報を掲載！",
+            "授業の評価や感想を確認できます！",
+        ],
     },
     {
         serviceName: "教科書",
