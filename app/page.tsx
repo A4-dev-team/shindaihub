@@ -47,9 +47,9 @@ const serviceBlockPropsList: ServiceBlockProps[] = [
 
 export default function Home() {
     return (
-        <div className="container flex flex-col w-full py-24 px-16 space-y-20">
+        <div className="container flex flex-col w-full py-8 px-8 space-y-8">
             <div className="flex flex-col space-y-3 text-blackcustum">
-                <div className="text-3xl md:text-5xl font-bold">
+                <div className="text-3xl md:text-4xl font-bold">
                     Hack Kobe.Uni
                 </div>
                 <div className="text-sm md:text-xl">

@@ -5,6 +5,7 @@ import "./globals.css";
 
 import { Analytics } from "@vercel/analytics/react";
 import Header from "@/components/header";
+import {Divider} from "@nextui-org/react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,6 +31,7 @@ export default function RootLayout({
                 <UserProvider>
                     <div className="h-screen flex flex-col items-center bg-whitecustum">
                         <Header />
+                        <Divider />
                         {children}
                     </div>
                 </UserProvider>
