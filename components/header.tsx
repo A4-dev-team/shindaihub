@@ -7,13 +7,15 @@ import { IoIosClose } from "react-icons/io";
 import { IoShareOutline } from "react-icons/io5";
 import Link from "next/link";
 import { IoIosMenu } from "react-icons/io";
+import { IoHome } from "react-icons/io5";
+import { IoDocumentTextOutline } from "react-icons/io5";
 
 const InstallButton = () => {
     const [isInstalled, setIsInstalled] = useState<boolean>(false);
     const [isAvailable, setIsAvailable] = useState<boolean>(false);
     const [deferredPrompt, setDeferredPrompt] = useState<Event | null>(null);
     const [showModal, setShowModal] = useState<boolean>(false);
-    const url = "https://kobe-uni-hub.vercel.app/"
+    const url = "https://kobe-uni-hub.vercel.app/";
 
     useEffect(() => {
         const handler = (e: Event) => {
@@ -104,7 +106,7 @@ const InstallButton = () => {
     );
 };
 
-export default function Header() {
+const Menu = () => {
     const [isOpen, setOpen] = useState<boolean>(false);
     const handleMenuOpen = () => {
         setOpen(!isOpen);
@@ -114,11 +116,36 @@ export default function Header() {
         setOpen(false);
     };
 
+    return(
+        <>
+            {isOpen && (
+                <div className={`fixed top-0 left-0 w-full h-full z-50 bg-gray-900 bg-opacity-75 flex items-center justify-center ${isOpen ? '' : 'hidden'}`}>
+                    <ul className="flex flex-col gap-10 text-xl text-white my-4">
+                        <li className="flex items-center hover:text-bluenormal">
+                            <IoHome />
+                            <Link onClick={handleMenuClose} href="/">ホーム</Link>
+                        </li>
+                        <li className="flex items-center hover:text-bluenormal">
+                            <IoDocumentTextOutline />
+                            <Link onClick={handleMenuClose} href="/recruit">採用情報</Link>
+                        </li>
+                        <li className="hover:text-bluenormal">
+                            <InstallButton />
+                        </li>
+                    </ul>
+                </div>            
+            )}
+            {isOpen ? <IoIosClose onClick={handleMenuClose} className="z-50" size={40} color="white" /> : <IoIosMenu onClick={handleMenuOpen} size={40}/>}
+      </>
+    )
+}
+
+export default function Header() {
 
     return (
-        <header className="container py-2 px-4 flex justify-between items-center">
-            <div className="flex items-center">
-                <div className="relative aspect-square h-full">
+        <header className="container py-2 px-4 flex justify-between">
+            <div className="flex items-center shrink-0">
+                <div className="relative aspect-square h-full shrink-0">
                     <Link href="/">
                         <Image
                             src="/A4Logo.png"
@@ -134,19 +161,30 @@ export default function Header() {
                     </div>
                 </Link>
             </div>
-            <nav className={`flex items-center space-x-4 ${isOpen ? "flex" : "hidden md:flex"}`}>
+            <nav
+                className="flex items-center space-x-4 hidden md:flex"
+            >
                 <ul className="flex gap-4 mx-2">
-                    <li>
-                        <Link onClick={handleMenuClose} href="/recruit">
+                    <li className="hover:text-bluenormal">
+                        <Link href="/" className="flex items-center">
+                            <IoHome />
+                            ホーム
+                        </Link>
+                    </li>
+                    <li className="hover:text-bluenormal">
+                        <Link href="/recruit" className="flex items-center">
+                            <IoDocumentTextOutline />
                             採用情報
                         </Link>
                     </li>
-                    <li>
-                        <InstallButton/>
+                    <li className="hover:text-bluenormal">
+                        <InstallButton />
                     </li>
                 </ul>
             </nav>
-            <IoIosMenu className={"md:hidden items-center"} size={50}/>
+            <div className="flex items-center md:hidden">
+                <Menu />
+            </div>
         </header>
     );
 }
