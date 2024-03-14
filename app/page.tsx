@@ -40,8 +40,8 @@ const serviceBlockPropsList: ServiceBlockProps[] = [
         serviceName: "学内マップ",
         url: "/campus-map",
         IconElement: <FaMapMarkedAlt />,
-        textContent: ["検索機能付の学内マップです"],
-        isDisabled: false,
+        textContent: ["Comming Soon..."],
+        isDisabled: true,
     },
 ];
 

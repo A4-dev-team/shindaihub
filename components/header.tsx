@@ -7,6 +7,8 @@ import { IoIosClose } from "react-icons/io";
 import { IoShareOutline } from "react-icons/io5";
 import Link from "next/link";
 import { IoIosMenu } from "react-icons/io";
+import { IoHome } from "react-icons/io5";
+import { IoDocumentTextOutline } from "react-icons/io5";
 
 const InstallButton = () => {
     const [isInstalled, setIsInstalled] = useState<boolean>(false);
@@ -104,7 +106,7 @@ const InstallButton = () => {
     );
 };
 
-export default function Header() {
+const Menu = () => {
     const [isOpen, setOpen] = useState<boolean>(false);
     const handleMenuOpen = () => {
         setOpen(!isOpen);
@@ -113,6 +115,32 @@ export default function Header() {
     const handleMenuClose = () => {
         setOpen(false);
     };
+
+    return(
+        <>
+            {isOpen && (
+                <div className={`fixed top-0 left-0 w-full h-full bg-gray-900 bg-opacity-75 flex items-center justify-center ${isOpen ? '' : 'hidden'}`}>
+                    <ul className="flex flex-col gap-10 text-xl text-white my-4">
+                        <li className="flex items-center hover:text-bluenormal">
+                            <IoHome />
+                            <Link onClick={handleMenuClose} href="/">ホーム</Link>
+                        </li>
+                        <li className="flex items-center hover:text-bluenormal">
+                            <IoDocumentTextOutline />
+                            <Link onClick={handleMenuClose} href="/recruit">採用情報</Link>
+                        </li>
+                        <li className="hover:text-bluenormal">
+                            <InstallButton />
+                        </li>
+                    </ul>
+                </div>            
+            )}
+            {isOpen ? <IoIosClose onClick={handleMenuClose} className="z-50" size={40} color="white" /> : <IoIosMenu onClick={handleMenuOpen} size={40}/>}
+      </>
+    )
+}
+
+export default function Header() {
 
     return (
         <header className="container py-2 px-4 flex justify-between">
@@ -134,23 +162,28 @@ export default function Header() {
                 </Link>
             </div>
             <nav
-                className={`flex items-center space-x-4 ${
-                    isOpen ? "flex" : "hidden md:flex"
-                }`}
+                className="flex items-center space-x-4 hidden md:flex"
             >
                 <ul className="flex gap-4 mx-2">
-                    <li>
-                        <Link onClick={handleMenuClose} href="/recruit">
+                    <li className="hover:text-bluenormal">
+                        <Link href="/" className="flex items-center">
+                            <IoHome />
+                            ホーム
+                        </Link>
+                    </li>
+                    <li className="hover:text-bluenormal">
+                        <Link href="/recruit" className="flex items-center">
+                            <IoDocumentTextOutline />
                             採用情報
                         </Link>
                     </li>
-                    <li>
+                    <li className="hover:text-bluenormal">
                         <InstallButton />
                     </li>
                 </ul>
             </nav>
             <div className="flex items-center md:hidden">
-                <IoIosMenu size={50} />
+                <Menu />
             </div>
         </header>
     );
