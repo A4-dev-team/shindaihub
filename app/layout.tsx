@@ -4,6 +4,8 @@ import { UserProvider } from "@auth0/nextjs-auth0/client";
 import "./globals.css";
 
 import { Analytics } from "@vercel/analytics/react";
+import Header from "@/components/header";
+import {Divider} from "@nextui-org/react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,7 +28,13 @@ export default function RootLayout({
                 <meta name="theme-color" content="#348ABF" />
             </head>
             <body className={inter.className}>
-                <UserProvider>{children}</UserProvider>
+                <UserProvider>
+                    <div className="h-screen flex flex-col items-center bg-whitecustum">
+                        <Header />
+                        <Divider />
+                        {children}
+                    </div>
+                </UserProvider>
                 <Analytics />
             </body>
         </html>

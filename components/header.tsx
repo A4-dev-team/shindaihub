@@ -6,6 +6,7 @@ import { IoMdDownload } from "react-icons/io";
 import { IoIosClose } from "react-icons/io";
 import { IoShareOutline } from "react-icons/io5";
 import Link from "next/link";
+import { IoIosMenu } from "react-icons/io";
 
 const InstallButton = () => {
     const [isInstalled, setIsInstalled] = useState<boolean>(false);
@@ -53,16 +54,15 @@ const InstallButton = () => {
     return (
         <>
             <button
-                className={`${
-                    isInstalled ? "bg-slate-300" : "bg-bluenormal"
-                } text-xs sm:text-base text-gray-800 font-bold py-2 px-2 rounded inline-flex items-center justify-center`}
+                className={`inline-flex items-center justify-center`}
                 onClick={handleButtonClick}
             >
-                <IoMdDownload className="text-white" />
-                <span className="xs:inline-block mx-1 text-white">
+                <IoMdDownload />
+                <span className="xs:inline-block mx-1 flex-grow">
                     {isInstalled ? "インストール済み" : "アプリインストール"}
                 </span>
             </button>
+
             {showModal && ( // モーダルを表示する条件
                 <div className="fixed top-0 left-0 w-full h-full bg-gray-800 bg-opacity-75 flex items-center justify-center">
                     <div className="bg-white rounded-lg w-full max-w-lg mx-3 md:mx-0 p-5">
@@ -105,20 +105,48 @@ const InstallButton = () => {
 };
 
 export default function Header() {
+    const [isOpen, setOpen] = useState<boolean>(false);
+    const handleMenuOpen = () => {
+        setOpen(!isOpen);
+    };
+
+    const handleMenuClose = () => {
+        setOpen(false);
+    };
+
+
     return (
-        <nav className="border-b-2 w-screen flex items-center px-5">
-            <div className="relative aspect-square h-full">
-                <Image
-                    src="/A4Logo.png"
-                    alt="SHINDAI HUB"
-                    fill
-                    className="object-contain"
-                />
+        <header className="container py-2 px-4 flex justify-between items-center">
+            <div className="flex items-center">
+                <div className="relative aspect-square h-full">
+                    <Link href="/">
+                        <Image
+                            src="/A4Logo.png"
+                            alt="SHINDAI HUB"
+                            fill
+                            className="object-contain"
+                        />
+                    </Link>
+                </div>
+                <Link href="/" className="ml-2">
+                    <div className="font-bold text-xl sm:text-2xl p-5 text-blackcustum whitespace-nowrap">
+                        SHINDAI HUB
+                    </div>
+                </Link>
             </div>
-            <div className="font-bold text-sm sm:text-2xl p-5 text-blackcustum">
-                SHINDAI HUB
-            </div>
-            <InstallButton />
-        </nav>
+            <nav className={`flex items-center space-x-4 ${isOpen ? "flex" : "hidden md:flex"}`}>
+                <ul className="flex gap-4 mx-2">
+                    <li>
+                        <Link onClick={handleMenuClose} href="/recruit">
+                            採用情報
+                        </Link>
+                    </li>
+                    <li>
+                        <InstallButton/>
+                    </li>
+                </ul>
+            </nav>
+            <IoIosMenu className={"md:hidden items-center"} size={50}/>
+        </header>
     );
 }
