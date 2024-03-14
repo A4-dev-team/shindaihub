@@ -13,7 +13,7 @@ const InstallButton = () => {
     const [isAvailable, setIsAvailable] = useState<boolean>(false);
     const [deferredPrompt, setDeferredPrompt] = useState<Event | null>(null);
     const [showModal, setShowModal] = useState<boolean>(false);
-    const url = "https://kobe-uni-hub.vercel.app/"
+    const url = "https://kobe-uni-hub.vercel.app/";
 
     useEffect(() => {
         const handler = (e: Event) => {
@@ -114,11 +114,10 @@ export default function Header() {
         setOpen(false);
     };
 
-
     return (
-        <header className="container py-2 px-4 flex justify-between items-center">
-            <div className="flex items-center">
-                <div className="relative aspect-square h-full">
+        <header className="container py-2 px-4 flex justify-between">
+            <div className="flex items-center shrink-0">
+                <div className="relative aspect-square h-full shrink-0">
                     <Link href="/">
                         <Image
                             src="/A4Logo.png"
@@ -134,7 +133,11 @@ export default function Header() {
                     </div>
                 </Link>
             </div>
-            <nav className={`flex items-center space-x-4 ${isOpen ? "flex" : "hidden md:flex"}`}>
+            <nav
+                className={`flex items-center space-x-4 ${
+                    isOpen ? "flex" : "hidden md:flex"
+                }`}
+            >
                 <ul className="flex gap-4 mx-2">
                     <li>
                         <Link onClick={handleMenuClose} href="/recruit">
@@ -142,11 +145,13 @@ export default function Header() {
                         </Link>
                     </li>
                     <li>
-                        <InstallButton/>
+                        <InstallButton />
                     </li>
                 </ul>
             </nav>
-            <IoIosMenu className={"md:hidden items-center"} size={50}/>
+            <div className="flex items-center md:hidden">
+                <IoIosMenu size={50} />
+            </div>
         </header>
     );
 }
