@@ -43,7 +43,7 @@ const serviceBlockPropsList: ServiceBlockProps[] = [
         url: "/campus-map",
         IconElement: <FaMapMarkedAlt />,
         textContent: ["Comming Soon..."],
-        isDisabled: true,
+        isDisabled: false,
     },
 ];
 
