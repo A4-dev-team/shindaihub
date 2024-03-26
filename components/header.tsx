@@ -6,13 +6,16 @@ import { IoMdDownload } from "react-icons/io";
 import { IoIosClose } from "react-icons/io";
 import { IoShareOutline } from "react-icons/io5";
 import Link from "next/link";
+import { IoIosMenu } from "react-icons/io";
+import { IoHome } from "react-icons/io5";
+import { IoDocumentTextOutline } from "react-icons/io5";
 
 const InstallButton = () => {
     const [isInstalled, setIsInstalled] = useState<boolean>(false);
     const [isAvailable, setIsAvailable] = useState<boolean>(false);
     const [deferredPrompt, setDeferredPrompt] = useState<Event | null>(null);
     const [showModal, setShowModal] = useState<boolean>(false);
-    const url = "https://kobe-uni-hub.vercel.app/"
+    const url = "https://kobe-uni-hub.vercel.app/";
 
     useEffect(() => {
         const handler = (e: Event) => {
@@ -53,16 +56,15 @@ const InstallButton = () => {
     return (
         <>
             <button
-                className={`${
-                    isInstalled ? "bg-slate-300" : "bg-bluenormal"
-                } text-xs sm:text-base text-gray-800 font-bold py-2 px-2 rounded inline-flex items-center justify-center`}
+                className={`inline-flex items-center justify-center`}
                 onClick={handleButtonClick}
             >
-                <IoMdDownload className="text-white" />
-                <span className="xs:inline-block mx-1 text-white">
+                <IoMdDownload />
+                <span className="xs:inline-block mx-1 flex-grow">
                     {isInstalled ? "インストール済み" : "アプリインストール"}
                 </span>
             </button>
+
             {showModal && ( // モーダルを表示する条件
                 <div className="fixed top-0 left-0 w-full h-full bg-gray-800 bg-opacity-75 flex items-center justify-center">
                     <div className="bg-white rounded-lg w-full max-w-lg mx-3 md:mx-0 p-5">
@@ -104,21 +106,85 @@ const InstallButton = () => {
     );
 };
 
+const Menu = () => {
+    const [isOpen, setOpen] = useState<boolean>(false);
+    const handleMenuOpen = () => {
+        setOpen(!isOpen);
+    };
+
+    const handleMenuClose = () => {
+        setOpen(false);
+    };
+
+    return(
+        <>
+            {isOpen && (
+                <div className={`fixed top-0 left-0 w-full h-full z-50 bg-gray-900 bg-opacity-75 flex items-center justify-center ${isOpen ? '' : 'hidden'}`}>
+                    <ul className="flex flex-col gap-10 text-xl text-white my-4">
+                        <li className="flex items-center hover:text-bluenormal">
+                            <IoHome />
+                            <Link onClick={handleMenuClose} href="/">ホーム</Link>
+                        </li>
+                        <li className="flex items-center hover:text-bluenormal">
+                            <IoDocumentTextOutline />
+                            <Link onClick={handleMenuClose} href="/recruit">採用情報</Link>
+                        </li>
+                        <li className="hover:text-bluenormal">
+                            <InstallButton />
+                        </li>
+                    </ul>
+                </div>            
+            )}
+            {isOpen ? <IoIosClose onClick={handleMenuClose} className="z-50" size={40} color="white" /> : <IoIosMenu onClick={handleMenuOpen} size={40}/>}
+      </>
+    )
+}
+
 export default function Header() {
+
     return (
-        <nav className="border-b-2 w-screen flex items-center px-5">
-            <div className="relative aspect-square h-full">
-                <Image
-                    src="/A4Logo.png"
-                    alt="SHINDAI HUB"
-                    fill
-                    className="object-contain"
-                />
+        <header className="container py-2 px-4 flex justify-between">
+            <div className="flex items-center shrink-0">
+                <div className="relative aspect-square h-full shrink-0">
+                    <Link href="/">
+                        <Image
+                            src="/A4Logo.png"
+                            alt="SHINDAI HUB"
+                            fill
+                            className="object-contain"
+                        />
+                    </Link>
+                </div>
+                <Link href="/" className="ml-2">
+                    <div className="font-bold text-xl sm:text-2xl p-5 text-blackcustum whitespace-nowrap">
+                        SHINDAI HUB
+                    </div>
+                </Link>
             </div>
-            <div className="font-bold text-sm sm:text-2xl p-5 text-blackcustum">
-                SHINDAI HUB
+            <nav
+                className="flex items-center space-x-4 hidden md:flex"
+            >
+                <ul className="flex gap-4 mx-2">
+                    <li className="hover:text-bluenormal">
+                        <Link href="/" className="flex items-center">
+                            <IoHome />
+                            ホーム
+                        </Link>
+                    </li>
+                    <li className="hover:text-bluenormal">
+                        <Link href="/recruit" className="flex items-center">
+                            <IoDocumentTextOutline />
+                            採用情報
+                        </Link>
+                    </li>
+                    <li className="hover:text-bluenormal">
+                        <InstallButton />
+                    </li>
+                </ul>
+            </nav>
+            <div className="flex items-center md:hidden">
+                <Menu />
             </div>
-            <InstallButton />
-        </nav>
+        </header>
     );
 }

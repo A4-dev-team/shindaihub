@@ -17,10 +17,12 @@ const serviceBlockPropsList: ServiceBlockProps[] = [
     },
     {
         serviceName: "授業",
-        url: "#",
+        url: "callback?redirect=https://shindaihub-class.glide.page",
         IconElement: <IoIosSchool />,
-        textContent: ["Comming Soon..."],
-        isDisabled: true,
+        textContent: [
+            "神大生のための授業情報を掲載！",
+            "授業の評価や感想を確認できます！",
+        ],
     },
     {
         serviceName: "教科書",
@@ -40,16 +42,16 @@ const serviceBlockPropsList: ServiceBlockProps[] = [
         serviceName: "学内マップ",
         url: "/campus-map",
         IconElement: <FaMapMarkedAlt />,
-        textContent: ["検索機能付の学内マップです"],
-        isDisabled: false,
+        textContent: ["Comming Soon..."],
+        isDisabled: true,
     },
 ];
 
 export default function Home() {
     return (
-        <div className="container flex flex-col w-full py-24 px-16 space-y-20">
+        <div className="container flex flex-col w-full py-8 px-8 space-y-8">
             <div className="flex flex-col space-y-3 text-blackcustum">
-                <div className="text-3xl md:text-5xl font-bold">
+                <div className="text-3xl md:text-4xl font-bold">
                     Hack Kobe.Uni
                 </div>
                 <div className="text-sm md:text-xl">
