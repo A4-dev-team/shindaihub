@@ -1,6 +1,5 @@
 import { Building, Campus } from "@/types";
 
-// TODO: 六甲台地区以外にも対応
 const campusList: readonly Campus[] = Object.freeze([
     {
         campusId: 3,
@@ -33,6 +32,30 @@ const campusList: readonly Campus[] = Object.freeze([
         mapImageUrl: "/map_turukabuto_2.png",
         lat: 34.73378693680222,
         lng: 135.23390361125394,
+    },
+    {
+        campusId: 5,
+        areaName: "楠地区",
+        campusName: "楠キャンパス",
+        mapImageUrl: "/map_kusunoki.png",
+        lat: 34.68594847807293,
+        lng: 135.17023253204766,
+    },
+    {
+        campusId: 6,
+        areaName: "名谷地区",
+        campusName: "名谷キャンパス",
+        mapImageUrl: "/map_myoudani.png",
+        lat: 34.67283149111686,
+        lng: 135.09835701166838,
+    },
+    {
+        campusId: 7,
+        areaName: "深江地区",
+        campusName: "深江キャンパス",
+        mapImageUrl: "/map_fukae.png",
+        lat: 34.719160171940416,
+        lng: 135.2908471225263,
     },
 ]);
 
