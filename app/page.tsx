@@ -28,22 +28,22 @@ const serviceBlockPropsList: ServiceBlockProps[] = [
         serviceName: "教科書",
         url: "#",
         IconElement: <FaBook />,
-        textContent: ["Comming Soon..."],
+        textContent: ["Coming Soon..."],
         isDisabled: true,
     },
     {
         serviceName: "ご飯",
         url: "#",
         IconElement: <PiForkKnife />,
-        textContent: ["Comming Soon..."],
+        textContent: ["Coming Soon..."],
         isDisabled: true,
     },
     {
         serviceName: "学内マップ",
         url: "/campus-map",
         IconElement: <FaMapMarkedAlt />,
-        textContent: ["Comming Soon..."],
-        isDisabled: true,
+        textContent: ["Coming Soon..."],
+        isDisabled: false,
     },
 ];
 
