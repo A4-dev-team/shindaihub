@@ -8,12 +8,13 @@ const useBuildingSearchForm = (defaultValues: BuildingSearchFormInputType) => {
         control,
         setValue,
         watch,
+        trigger,
     } = useForm<BuildingSearchFormInputType>({
         mode: "onSubmit",
         defaultValues,
     });
 
-    return { isValid, handleSubmit, control, setValue, watch };
+    return { isValid, handleSubmit, control, setValue, watch, trigger };
 };
 
 export { useBuildingSearchForm };
