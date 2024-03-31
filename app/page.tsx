@@ -53,7 +53,7 @@ const serviceBlockPropsList: ServiceBlockProps[] = [
 export default function Home() {
     return (
         <div className="container flex flex-col w-full py-8 px-8 space-y-8">
-            <div className="flex flex-col space-y-3 text-blackcustum">
+            <div className="flex flex-col space-y-2 text-blackcustum">
                 <div className="text-3xl md:text-4xl font-bold">
                     Hack Kobe.Uni
                 </div>
@@ -62,8 +62,8 @@ export default function Home() {
                 </div>
             </div>
             <div className="text-sm md:text-xl">
-                <Link href="/news" className="text-bluenormal font-bold">サービスに関して重要なお知らせ</Link>があります。<br/>
-                ご確認ください。
+                SHINDAI HUBを一緒に作るメンバーを募集しています！<br/>
+                ぜひ<Link href="/recruit" className="text-bluenormal font-bold">採用情報</Link>からご確認ください。<br/>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-10">
                 {serviceBlockPropsList.map((props, index) => {
