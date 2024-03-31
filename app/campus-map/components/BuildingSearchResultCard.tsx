@@ -5,10 +5,17 @@ type BuildingSearchResultCardProps = {
     mapImageUrl: string;
     buildingId?: number;
     buildingName?: string;
+    buildingLayoutPdfUrl?: string;
 };
 
 const BuildingSearchResultCard = (props: BuildingSearchResultCardProps) => {
-    const { campusName, buildingName, buildingId, mapImageUrl } = props;
+    const {
+        campusName,
+        buildingName,
+        buildingId,
+        mapImageUrl,
+        buildingLayoutPdfUrl,
+    } = props;
 
     return (
         <div className="w-full border rounded-lg border-bluenormal bg-white p-6">
@@ -27,6 +34,16 @@ const BuildingSearchResultCard = (props: BuildingSearchResultCardProps) => {
                                 {campusName} {buildingId}番
                             </Link>
                         </div>
+                        {buildingLayoutPdfUrl && (
+                            <div>
+                                <Link
+                                    href={buildingLayoutPdfUrl}
+                                    className="underline text-blue-800"
+                                >
+                                    詳しい教室の配置図はこちら
+                                </Link>
+                            </div>
+                        )}
                     </div>
                 ) : (
                     <div>情報が見つかりませんでした。</div>

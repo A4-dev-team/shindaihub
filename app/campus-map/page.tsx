@@ -30,6 +30,7 @@ export default function Page() {
                     mapImageUrl={campus.mapImageUrl}
                     buildingId={building?.buildingId}
                     buildingName={building?.buildingName}
+                    buildingLayoutPdfUrl={building?.buildingLayoutPdfUrl}
                 />
             )}
             <GoogleMapIFrame
