@@ -6,8 +6,9 @@ import {
     BuildingSearchResultCard,
     GoogleMapIFrame,
 } from "./components";
+import { Suspense } from "react";
 
-export default function Page() {
+const PageComponent = () => {
     const searchParams = useSearchParams();
     const campusId = parseInt(searchParams.get("campusId") || "3");
     const keyword = searchParams.get("keyword") || "";
@@ -39,5 +40,13 @@ export default function Page() {
                 q={building ? undefined : campus.campusName}
             />
         </div>
+    );
+};
+
+export default function Page() {
+    return (
+        <Suspense>
+            <PageComponent />
+        </Suspense>
     );
 }
