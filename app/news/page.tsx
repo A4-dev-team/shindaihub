@@ -5,7 +5,7 @@ import news_info from "../../public/news/news_info.json";
 import Link from "next/link";
 
 export default async function Page() {
-    const data = news_info.data;
+    const newsInfo = news_info.data;
 
     return (
         <div className="container">
@@ -14,7 +14,7 @@ export default async function Page() {
                     <p className="text-3xl p-5">お知らせ詳細</p>
                 </div>
                 <div className="w-full sm:w-2/3">
-                    {data.map((doc, index) => (
+                    {newsInfo.map((doc, index) => (
                         <Link
                             key={index}
                             href={{
