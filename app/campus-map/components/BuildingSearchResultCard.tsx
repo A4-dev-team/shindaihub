@@ -6,6 +6,7 @@ type BuildingSearchResultCardProps = {
     buildingId?: number;
     buildingName?: string;
     buildingLayoutPdfUrl?: string;
+    googleMapsUrl?: string;
 };
 
 const BuildingSearchResultCard = (props: BuildingSearchResultCardProps) => {
@@ -15,6 +16,7 @@ const BuildingSearchResultCard = (props: BuildingSearchResultCardProps) => {
         buildingId,
         mapImageUrl,
         buildingLayoutPdfUrl,
+        googleMapsUrl,
     } = props;
 
     return (
@@ -41,6 +43,16 @@ const BuildingSearchResultCard = (props: BuildingSearchResultCardProps) => {
                                     className="underline text-blue-800"
                                 >
                                     詳しい教室の配置図はこちら
+                                </Link>
+                            </div>
+                        )}
+                        {googleMapsUrl && (
+                            <div>
+                                <Link
+                                    href={googleMapsUrl}
+                                    className="underline text-blue-800"
+                                >
+                                    Google Mapsで開く
                                 </Link>
                             </div>
                         )}

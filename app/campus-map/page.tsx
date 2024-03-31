@@ -18,6 +18,8 @@ const PageComponent = () => {
     const building = findBuildingByKeyword(campusId, keyword);
     const campus = findCampusById(campusId);
 
+    const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${building?.lat},${building?.lng}`;
+
     if (!campus) {
         throw Error("campusIdが登録されていません。");
     }
@@ -32,6 +34,7 @@ const PageComponent = () => {
                     buildingId={building?.buildingId}
                     buildingName={building?.buildingName}
                     buildingLayoutPdfUrl={building?.buildingLayoutPdfUrl}
+                    googleMapsUrl={googleMapsUrl}
                 />
             )}
             <GoogleMapIFrame
