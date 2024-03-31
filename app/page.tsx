@@ -26,6 +26,15 @@ const serviceBlockPropsList: ServiceBlockProps[] = [
         ],
     },
     {
+        serviceName: "学内マップ",
+        url: "/campus-map",
+        IconElement: <FaMapMarkedAlt />,
+        textContent: [
+            "神戸大学のキャンパスマップを掲載！",
+            "建物名前で検索し、Google Mapで確認できます！",
+        ],
+    },
+    {
         serviceName: "教科書",
         url: "#",
         IconElement: <FaBook />,
@@ -38,13 +47,6 @@ const serviceBlockPropsList: ServiceBlockProps[] = [
         IconElement: <PiForkKnife />,
         textContent: ["Coming Soon..."],
         isDisabled: true,
-    },
-    {
-        serviceName: "学内マップ",
-        url: "/campus-map",
-        IconElement: <FaMapMarkedAlt />,
-        textContent: ["Coming Soon..."],
-        isDisabled: false,
     },
 ];
 
