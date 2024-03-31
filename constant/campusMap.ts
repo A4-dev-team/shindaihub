@@ -78,50 +78,49 @@ const buildingList: readonly Building[] = Object.freeze([
     {
         buildingId: 3,
         campusId: 4,
-        buildingName: "国際人間科学部、人間発達環境学研究科・G棟",
+        buildingName: "G棟",
         lat: 34.73340073345218,
         lng: 135.23347488224724,
     },
     {
         buildingId: 4,
         campusId: 4,
-        buildingName: "国際人間科学部、人間発達環境学研究科・D棟",
+        buildingName: "D棟",
         lat: 34.73389708049021,
         lng: 135.2349213611865,
     },
     {
         buildingId: 5,
         campusId: 4,
-        buildingName:
-            "国際人間科学部、人間発達環境学研究科・A棟（人間科学図書館、発達支援インスティテュート）",
+        buildingName: "A棟（人間科学図書館、発達支援インスティテュート）",
         lat: 34.73345495638442,
         lng: 135.2344848798268,
     },
     {
         buildingId: 6,
         campusId: 4,
-        buildingName: "国際人間科学部、人間発達環境学研究科・E棟",
+        buildingName: "E棟",
         lat: 34.73331939899139,
         lng: 135.2338809114337,
     },
     {
         buildingId: 7,
         campusId: 4,
-        buildingName: "国際人間科学部、人間発達環境学研究科・B棟",
+        buildingName: "B棟",
         lat: 34.73304202701354,
         lng: 135.23399256945595,
     },
     {
         buildingId: 8,
         campusId: 4,
-        buildingName: "国際人間科学部、人間発達環境学研究科・F棟",
+        buildingName: "F棟",
         lat: 34.73300657338297,
         lng: 135.23341144018792,
     },
     {
         buildingId: 9,
         campusId: 4,
-        buildingName: "国際人間科学部、人間発達環境学研究科・C棟",
+        buildingName: "C棟",
         lat: 34.73256027347014,
         lng: 135.23347234456185,
     },
@@ -155,8 +154,7 @@ const buildingList: readonly Building[] = Object.freeze([
     {
         buildingId: 13,
         campusId: 3,
-        buildingName:
-            "大学教育推進機構（教養教育院）・D棟 （国際コミュニケーションセンター）",
+        buildingName: "D棟 （国際コミュニケーションセンター）",
         lat: 34.731674846369295,
         lng: 135.23638645607508,
         buildingLayoutPdfUrl:
@@ -165,16 +163,16 @@ const buildingList: readonly Building[] = Object.freeze([
     {
         buildingId: 14,
         campusId: 3,
-        buildingName: "大学教育推進機構（教養教育院）・N棟",
-        lat: 34.73165734686011,
-        lng: 135.23642562247818,
+        buildingName: "N棟",
+        lat: 34.73133123086252,
+        lng: 135.23620244919934,
         buildingLayoutPdfUrl:
             "https://drive.google.com/file/d/1T7PrmTjten3kCPvmJl1gF3KMAcEubImI/view?usp=drive_link",
     },
     {
         buildingId: 15,
         campusId: 3,
-        buildingName: "大学教育推進機構（教養教育院）・K棟",
+        buildingName: "K棟（+情報処理室）",
         lat: 34.731121146868965,
         lng: 135.2358958177603,
         buildingLayoutPdfUrl:
@@ -192,8 +190,7 @@ const buildingList: readonly Building[] = Object.freeze([
     {
         buildingId: 17,
         campusId: 3,
-        buildingName:
-            "大学教育推進機構（教養教育院、大学教育研究センター）・C棟",
+        buildingName: "C棟",
         lat: 34.73094778823293,
         lng: 135.23606751373367,
         buildingLayoutPdfUrl:
@@ -202,7 +199,7 @@ const buildingList: readonly Building[] = Object.freeze([
     {
         buildingId: 18,
         campusId: 3,
-        buildingName: "国際人間科学部、国際文化学研究科・F棟",
+        buildingName: "F棟",
         lat: 34.73106873615689,
         lng: 135.23685240961203,
         buildingLayoutPdfUrl:
@@ -211,7 +208,7 @@ const buildingList: readonly Building[] = Object.freeze([
     {
         buildingId: 19,
         campusId: 3,
-        buildingName: "大学教育推進機構（教養教育院）・M棟",
+        buildingName: "M棟",
         lat: 34.730867156185305,
         lng: 135.23643543367666,
         buildingLayoutPdfUrl:
@@ -220,15 +217,14 @@ const buildingList: readonly Building[] = Object.freeze([
     {
         buildingId: 20,
         campusId: 3,
-        buildingName:
-            "大学教育推進機構（教養教育院）,国際人間科学部,国際文化学研究科・B棟（学生センター）",
+        buildingName: "B棟（学生センター）",
         lat: 34.730717986689804,
         lng: 135.23677882562342,
     },
     {
         buildingId: 21,
         campusId: 3,
-        buildingName: "大学教育推進機構（教養教育院）・大、中講義室",
+        buildingName: "大、中講義室・B109・B110・B209・B210",
         lat: 34.73053656396759,
         lng: 135.23613128652383,
         buildingLayoutPdfUrl:
@@ -237,8 +233,7 @@ const buildingList: readonly Building[] = Object.freeze([
     {
         buildingId: 22,
         campusId: 3,
-        buildingName:
-            "国際人間科学部、国際文化学研究科・L棟（キャンパスライフ支援センター）",
+        buildingName: "L棟（キャンパスライフ支援センター）",
         lat: 34.73043577339428,
         lng: 135.23663656324547,
         buildingLayoutPdfUrl:
@@ -247,7 +242,7 @@ const buildingList: readonly Building[] = Object.freeze([
     {
         buildingId: 23,
         campusId: 3,
-        buildingName: "国際人間科学部、国際文化学研究科・E棟",
+        buildingName: "E棟",
         lat: 34.7303994887578,
         lng: 135.23700938878767,
         buildingLayoutPdfUrl:
@@ -296,7 +291,7 @@ const buildingList: readonly Building[] = Object.freeze([
     {
         buildingId: 29,
         campusId: 1,
-        buildingName: "社会科学系フロンティア館（計算社会科学研究センター）",
+        buildingName: "社会科学系フロンティア館(Ⅶ)（計算社会科学研究センター）",
         lat: 34.7297411158387,
         lng: 135.23381177109195,
     },
@@ -310,7 +305,7 @@ const buildingList: readonly Building[] = Object.freeze([
     {
         buildingId: 31,
         campusId: 1,
-        buildingName: "第二学舎（法学研究科）",
+        buildingName: "第二学舎(Ⅱ)（法学部学者・法学研究科）",
         lat: 34.72912396597631,
         lng: 135.23332110908393,
         buildingLayoutPdfUrl:
@@ -355,7 +350,7 @@ const buildingList: readonly Building[] = Object.freeze([
         buildingId: 37,
         campusId: 1,
         buildingName:
-            "本館（経済学研究科、経営学研究科、社会システムイノベーションセンター）",
+            "六甲台本館(Ⅰ)（経済学研究科、経営学研究科、社会システムイノベーションセンター）",
         lat: 34.728250831303924,
         lng: 135.23475042885923,
         buildingLayoutPdfUrl:
@@ -364,21 +359,21 @@ const buildingList: readonly Building[] = Object.freeze([
     {
         buildingId: 38,
         campusId: 1,
-        buildingName: "第三学舎",
+        buildingName: "第三学舎(Ⅲ)（情報処理室）",
         lat: 34.728520837787876,
         lng: 135.2343962988882,
     },
     {
         buildingId: 39,
         campusId: 1,
-        buildingName: "第四学舎（企業資料総合センター）",
+        buildingName: "第四学舎(Ⅳ)（企業資料総合センター）",
         lat: 34.728871494242746,
         lng: 135.23389710362787,
     },
     {
         buildingId: 40,
         campusId: 1,
-        buildingName: "第五学舎（国際協力研究科）",
+        buildingName: "第五学舎(Ⅴ)（は国際協力研究科学舎・国際協力研究科）",
         lat: 34.72834200242311,
         lng: 135.23339364174137,
     },
@@ -392,7 +387,7 @@ const buildingList: readonly Building[] = Object.freeze([
     {
         buildingId: 42,
         campusId: 1,
-        buildingName: "社会科学系アカデミア館（放送大学兵庫学習センター）",
+        buildingName: "社会科学系アカデミア館(Ⅵ)（放送大学兵庫学習センター）",
         lat: 34.727405218762314,
         lng: 135.23366257355076,
     },
@@ -463,7 +458,7 @@ const buildingList: readonly Building[] = Object.freeze([
     {
         buildingId: 51,
         campusId: 2,
-        buildingName: "工学研究科・D1,D2棟",
+        buildingName: "工学研究科・D1,D2棟(+NSSOLLab)",
         lat: 34.726929091303774,
         lng: 135.23714145565188,
         buildingLayoutPdfUrl:
@@ -550,7 +545,7 @@ const buildingList: readonly Building[] = Object.freeze([
     {
         buildingId: 62,
         campusId: 2,
-        buildingName: "工学研究科・工作技術センター",
+        buildingName: "工学研究科・工作技術センター(工作センター)",
         lat: 34.72743201182635,
         lng: 135.23642473246494,
     },
@@ -859,7 +854,7 @@ const buildingList: readonly Building[] = Object.freeze([
     {
         buildingId: 102,
         buildingName:
-            "神戸大学百年記念館（神大会館）、グローバル教育センター、大学文書史料室、誓子・波津女俳句俳諧文庫",
+            "神戸大学百年記念館（神大会館）、グローバル教育センター(国際教育総合センター)、大学文書史料室、誓子・波津女俳句俳諧文庫",
         campusId: 2,
         lat: 34.72457875840834,
         lng: 135.2359216801835,
