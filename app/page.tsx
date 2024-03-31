@@ -30,7 +30,7 @@ const serviceBlockPropsList: ServiceBlockProps[] = [
         IconElement: <FaMapMarkedAlt />,
         textContent: [
             "神戸大学のキャンパスマップを掲載！",
-            "建物の名前から検索し、Google Mapで確認できます！",
+            "建物名前で検索し、Google Mapで確認できます！",
         ],
     },
     {
