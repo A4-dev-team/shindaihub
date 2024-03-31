@@ -70,7 +70,7 @@ const BuildingSearchForm = (props: BuildingSearchFormInputType) => {
                     <div className="w-2/3 md:grow relative">
                         <input
                             type="text"
-                            className="w-full block py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                            className="w-full block py-2 px-3 pr-10 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                             placeholder="例：〇〇棟"
                             value={field.value}
                             onChange={field.onChange}
