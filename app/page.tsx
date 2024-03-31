@@ -3,6 +3,7 @@ import { IoIosSchool } from "react-icons/io";
 import { PiForkKnife } from "react-icons/pi";
 import { FaBook, FaMapMarkedAlt } from "react-icons/fa";
 import { ServiceBlock, ServiceBlockProps } from "@/components/serviceBlock";
+import Link from "next/link";
 
 // サービス追加する時はここに追加
 const serviceBlockPropsList: ServiceBlockProps[] = [
@@ -25,6 +26,15 @@ const serviceBlockPropsList: ServiceBlockProps[] = [
         ],
     },
     {
+        serviceName: "学内マップ",
+        url: "/campus-map",
+        IconElement: <FaMapMarkedAlt />,
+        textContent: [
+            "神戸大学のキャンパスマップを掲載！",
+            "建物名前で検索し、Google Mapで確認できます！",
+        ],
+    },
+    {
         serviceName: "教科書",
         url: "#",
         IconElement: <FaBook />,
@@ -38,25 +48,22 @@ const serviceBlockPropsList: ServiceBlockProps[] = [
         textContent: ["Coming Soon..."],
         isDisabled: true,
     },
-    {
-        serviceName: "学内マップ",
-        url: "/campus-map",
-        IconElement: <FaMapMarkedAlt />,
-        textContent: ["Coming Soon..."],
-        isDisabled: false,
-    },
 ];
 
 export default function Home() {
     return (
         <div className="container flex flex-col w-full py-8 px-8 space-y-8">
-            <div className="flex flex-col space-y-3 text-blackcustum">
+            <div className="flex flex-col space-y-2 text-blackcustum">
                 <div className="text-3xl md:text-4xl font-bold">
                     Hack Kobe.Uni
                 </div>
                 <div className="text-sm md:text-xl">
                     神大生に最高の学生生活を届ける。
                 </div>
+            </div>
+            <div className="text-sm md:text-xl">
+                SHINDAI HUBを一緒に作るメンバーを募集しています！<br/>
+                ぜひ<Link href="/recruit" className="text-bluenormal font-bold">採用情報</Link>からご確認ください。<br/>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-10">
                 {serviceBlockPropsList.map((props, index) => {
