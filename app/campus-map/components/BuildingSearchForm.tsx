@@ -7,6 +7,7 @@ import {
 } from "../hooks";
 import { BuildingSearchFormInputType } from "../types";
 
+// TODO: 肥大化しているので、リファクタリングを検討
 const BuildingSearchForm = (props: BuildingSearchFormInputType) => {
     const { campusId, keyword } = props;
     const { isValid, control, handleSubmit, setValue, watch, trigger } =
@@ -76,6 +77,30 @@ const BuildingSearchForm = (props: BuildingSearchFormInputType) => {
                             onBlur={() => setIsShowSuggestions(false)}
                             onFocus={() => setIsShowSuggestions(true)}
                         />
+                        {field.value && (
+                            <div
+                                className="absolute inset-y-0 right-0 pr-3 flex items-center cursor-pointer"
+                                onClick={() => {
+                                    setValue("keyword", "");
+                                }}
+                            >
+                                <svg
+                                    className="h-5 w-5 text-gray-400"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                    aria-hidden="true"
+                                >
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth={2}
+                                        d="M6 18L18 6M6 6l12 12"
+                                    />
+                                </svg>
+                            </div>
+                        )}
                         {isShowSuggestions && (
                             <ul className="w-full absolute z-10 bg-white border-gray-300 rounded-md shadow-lg">
                                 {buildingSuggestions &&
