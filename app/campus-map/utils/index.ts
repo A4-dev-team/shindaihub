@@ -15,7 +15,11 @@ const findBuildingByKeyword = (campusId: number, keyword: string) => {
 };
 
 const findAllBuildingsByKeyword = (campusId: number, keyword: string) => {
-    if (keyword == "") return;
+    if (keyword == "") {
+        return constant.buildingList.filter(
+            (building) => building.campusId == campusId
+        );
+    }
     const matches = constant.buildingList.filter((building) => {
         const regex = new RegExp(keyword, "gi");
         return (

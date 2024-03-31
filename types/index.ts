@@ -13,4 +13,5 @@ export type Building = {
     buildingName: string;
     lat: number;
     lng: number;
+    buildingLayoutPdfUrl?: string;
 };
