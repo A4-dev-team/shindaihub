@@ -18,15 +18,10 @@ export default async function Page() {
                         <Link
                             key={index}
                             href={{
-                                pathname: `/news/${doc.pdf}`,
-                                query: {
-                                    title: doc.title,
-                                    date: doc.date,
-                                    pdf: doc.pdf,
-                                },
+                                pathname: doc.pdf_url,
                             }}
                         >
-                            <div key={doc.pdf} className="p-5 border-y">
+                            <div key={index} className="p-5 border-y">
                                 <p className="text-gray-500">{doc.date}</p>
                                 <div className="flex items-center justify-center">
                                     <h1 className="text-2xl font-bold text-bluenormal">

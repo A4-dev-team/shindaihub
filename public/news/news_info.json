@@ -1,12 +1,7 @@
 {
     "data": [
         {
-            "pdf": "doc",
-            "title": "test",
-            "date": "2013-01-01"
-        },
-        {
-            "pdf": "doc",
+            "pdf_url": "https://www.google.com",
             "title": "test",
             "date": "2013-01-01"
         }
