@@ -164,7 +164,7 @@ const buildingList: readonly Building[] = Object.freeze([
     {
         buildingId: 15,
         campusId: 3,
-        buildingName: "K棟（情報処理室）",
+        buildingName: "K棟（+情報処理室）",
         lat: 34.731121146868965,
         lng: 135.2358958177603,
     },
