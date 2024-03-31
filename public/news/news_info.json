@@ -1,9 +1,14 @@
 {
     "data": [
         {
-            "pdf_url": "https://www.google.com",
-            "title": "test",
-            "date": "2013-01-01"
+            "pdf_url": "https://drive.google.com/file/d/11ZlQNu38IMr5g-ofEtT8I83ldeFl5bHP/view",
+            "title": "SHINDAIHUB 授業リリースのお知らせ",
+            "date": "2024/03/15"
+        },
+        {
+            "pdf_url": "https://drive.google.com/file/d/11HmXJCxS4m1SG9zzkUAoT3ei6SPy3Uys/view",
+            "title": "SHINDAIHUB 賃貸リリースのお知らせ",
+            "date": "2024/02/24"
         }
     ]
 }
