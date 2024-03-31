@@ -131,7 +131,7 @@ const buildingList: readonly Building[] = Object.freeze([
         lat: 34.73220563799064,
         lng: 135.23812786541427,
         buildingLayoutPdfUrl:
-            "https://drive.google.com/file/d/1T7PrmTjten3kCPvmJl1gF3KMAcEubImI/view?usp=drive_link",
+            "https://drive.google.com/file/d/1T7PrmTjten3kCPvmJl1gF3KMAcEubImI/view?usp=sharing",
     },
     {
         buildingId: 11,
@@ -140,7 +140,7 @@ const buildingList: readonly Building[] = Object.freeze([
         lat: 34.73209275481993,
         lng: 135.23778447346749,
         buildingLayoutPdfUrl:
-            "https://drive.google.com/file/d/1T7PrmTjten3kCPvmJl1gF3KMAcEubImI/view?usp=drive_link",
+            "https://drive.google.com/file/d/1T7PrmTjten3kCPvmJl1gF3KMAcEubImI/view?usp=sharing",
     },
     {
         buildingId: 12,
@@ -149,7 +149,7 @@ const buildingList: readonly Building[] = Object.freeze([
         lat: 34.731911335115434,
         lng: 135.23725466874964,
         buildingLayoutPdfUrl:
-            "https://drive.google.com/file/d/1T7PrmTjten3kCPvmJl1gF3KMAcEubImI/view?usp=drive_link",
+            "https://drive.google.com/file/d/1T7PrmTjten3kCPvmJl1gF3KMAcEubImI/view?usp=sharing",
     },
     {
         buildingId: 13,
@@ -158,7 +158,7 @@ const buildingList: readonly Building[] = Object.freeze([
         lat: 34.731674846369295,
         lng: 135.23638645607508,
         buildingLayoutPdfUrl:
-            "https://drive.google.com/file/d/1T7PrmTjten3kCPvmJl1gF3KMAcEubImI/view?usp=drive_link",
+            "https://drive.google.com/file/d/1T7PrmTjten3kCPvmJl1gF3KMAcEubImI/view?usp=sharing",
     },
     {
         buildingId: 14,
@@ -167,7 +167,7 @@ const buildingList: readonly Building[] = Object.freeze([
         lat: 34.73133123086252,
         lng: 135.23620244919934,
         buildingLayoutPdfUrl:
-            "https://drive.google.com/file/d/1T7PrmTjten3kCPvmJl1gF3KMAcEubImI/view?usp=drive_link",
+            "https://drive.google.com/file/d/1T7PrmTjten3kCPvmJl1gF3KMAcEubImI/view?usp=sharing",
     },
     {
         buildingId: 15,
@@ -176,7 +176,7 @@ const buildingList: readonly Building[] = Object.freeze([
         lat: 34.731121146868965,
         lng: 135.2358958177603,
         buildingLayoutPdfUrl:
-            "https://drive.google.com/file/d/1T7PrmTjten3kCPvmJl1gF3KMAcEubImI/view?usp=drive_link",
+            "https://drive.google.com/file/d/1T7PrmTjten3kCPvmJl1gF3KMAcEubImI/view?usp=sharing",
     },
     {
         buildingId: 16,
@@ -185,7 +185,7 @@ const buildingList: readonly Building[] = Object.freeze([
         lat: 34.73096518512518,
         lng: 135.23605670612676,
         buildingLayoutPdfUrl:
-            "https://drive.google.com/file/d/1T7PrmTjten3kCPvmJl1gF3KMAcEubImI/view?usp=drive_link",
+            "https://drive.google.com/file/d/1T7PrmTjten3kCPvmJl1gF3KMAcEubImI/view?usp=sharing",
     },
     {
         buildingId: 17,
@@ -194,7 +194,7 @@ const buildingList: readonly Building[] = Object.freeze([
         lat: 34.73094778823293,
         lng: 135.23606751373367,
         buildingLayoutPdfUrl:
-            "https://drive.google.com/file/d/1T7PrmTjten3kCPvmJl1gF3KMAcEubImI/view?usp=drive_link",
+            "https://drive.google.com/file/d/1T7PrmTjten3kCPvmJl1gF3KMAcEubImI/view?usp=sharing",
     },
     {
         buildingId: 18,
@@ -203,7 +203,7 @@ const buildingList: readonly Building[] = Object.freeze([
         lat: 34.73106873615689,
         lng: 135.23685240961203,
         buildingLayoutPdfUrl:
-            "https://drive.google.com/file/d/1T7PrmTjten3kCPvmJl1gF3KMAcEubImI/view?usp=drive_link",
+            "https://drive.google.com/file/d/1T7PrmTjten3kCPvmJl1gF3KMAcEubImI/view?usp=sharing",
     },
     {
         buildingId: 19,
@@ -212,7 +212,7 @@ const buildingList: readonly Building[] = Object.freeze([
         lat: 34.730867156185305,
         lng: 135.23643543367666,
         buildingLayoutPdfUrl:
-            "https://drive.google.com/file/d/1T7PrmTjten3kCPvmJl1gF3KMAcEubImI/view?usp=drive_link",
+            "https://drive.google.com/file/d/1T7PrmTjten3kCPvmJl1gF3KMAcEubImI/view?usp=sharing",
     },
     {
         buildingId: 20,
@@ -220,6 +220,8 @@ const buildingList: readonly Building[] = Object.freeze([
         buildingName: "B棟（学生センター）",
         lat: 34.730717986689804,
         lng: 135.23677882562342,
+        buildingLayoutPdfUrl:
+            "https://drive.google.com/file/d/1T7PrmTjten3kCPvmJl1gF3KMAcEubImI/view?usp=sharing",
     },
     {
         buildingId: 21,
@@ -228,7 +230,7 @@ const buildingList: readonly Building[] = Object.freeze([
         lat: 34.73053656396759,
         lng: 135.23613128652383,
         buildingLayoutPdfUrl:
-            "https://drive.google.com/file/d/1T7PrmTjten3kCPvmJl1gF3KMAcEubImI/view?usp=drive_link",
+            "https://drive.google.com/file/d/1T7PrmTjten3kCPvmJl1gF3KMAcEubImI/view?usp=sharing",
     },
     {
         buildingId: 22,
@@ -237,7 +239,7 @@ const buildingList: readonly Building[] = Object.freeze([
         lat: 34.73043577339428,
         lng: 135.23663656324547,
         buildingLayoutPdfUrl:
-            "https://drive.google.com/file/d/1T7PrmTjten3kCPvmJl1gF3KMAcEubImI/view?usp=drive_link",
+            "https://drive.google.com/file/d/1T7PrmTjten3kCPvmJl1gF3KMAcEubImI/view?usp=sharing",
     },
     {
         buildingId: 23,
@@ -246,7 +248,7 @@ const buildingList: readonly Building[] = Object.freeze([
         lat: 34.7303994887578,
         lng: 135.23700938878767,
         buildingLayoutPdfUrl:
-            "https://drive.google.com/file/d/1T7PrmTjten3kCPvmJl1gF3KMAcEubImI/view?usp=drive_link",
+            "https://drive.google.com/file/d/1T7PrmTjten3kCPvmJl1gF3KMAcEubImI/view?usp=sharing",
     },
     {
         buildingId: 24,
@@ -256,7 +258,7 @@ const buildingList: readonly Building[] = Object.freeze([
         lat: 34.73008905287323,
         lng: 135.23675920322646,
         buildingLayoutPdfUrl:
-            "https://drive.google.com/file/d/1T7PrmTjten3kCPvmJl1gF3KMAcEubImI/view?usp=drive_link",
+            "https://drive.google.com/file/d/1T7PrmTjten3kCPvmJl1gF3KMAcEubImI/view?usp=sharing",
     },
     {
         buildingId: 25,
@@ -265,7 +267,7 @@ const buildingList: readonly Building[] = Object.freeze([
         lat: 34.72927062541144,
         lng: 135.2361803424828,
         buildingLayoutPdfUrl:
-            "https://drive.google.com/file/d/1T7PrmTjten3kCPvmJl1gF3KMAcEubImI/view?usp=drive_link",
+            "https://drive.google.com/file/d/1T7PrmTjten3kCPvmJl1gF3KMAcEubImI/view?usp=sharing",
     },
     {
         buildingId: 26,
