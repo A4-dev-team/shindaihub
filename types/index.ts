@@ -2,14 +2,16 @@ export type Campus = {
     campusId: number;
     areaName: string;
     campusName: string;
-    mapUrl: string;
+    mapImageUrl: string;
+    lat: number;
+    lng: number;
 };
 
 export type Building = {
     buildingId: number;
     campusId: number;
     buildingName: string;
-    positionX: number;
-    positionY: number;
-    pictureUrl: string;
+    lat: number;
+    lng: number;
+    buildingLayoutPdfUrl?: string;
 };
