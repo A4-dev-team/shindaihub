@@ -92,8 +92,7 @@ const buildingList: readonly Building[] = Object.freeze([
     {
         buildingId: 5,
         campusId: 4,
-        buildingName:
-            "A棟（人間科学図書館、発達支援インスティテュート）",
+        buildingName: "A棟（人間科学図書館、発達支援インスティテュート）",
         lat: 34.73345495638442,
         lng: 135.2344848798268,
     },
@@ -131,6 +130,8 @@ const buildingList: readonly Building[] = Object.freeze([
         buildingName: "武道場（養心館）",
         lat: 34.73220563799064,
         lng: 135.23812786541427,
+        buildingLayoutPdfUrl:
+            "https://drive.google.com/file/d/1T7PrmTjten3kCPvmJl1gF3KMAcEubImI/view?usp=sharing",
     },
     {
         buildingId: 11,
@@ -138,6 +139,8 @@ const buildingList: readonly Building[] = Object.freeze([
         buildingName: "第二体育館",
         lat: 34.73209275481993,
         lng: 135.23778447346749,
+        buildingLayoutPdfUrl:
+            "https://drive.google.com/file/d/1T7PrmTjten3kCPvmJl1gF3KMAcEubImI/view?usp=sharing",
     },
     {
         buildingId: 12,
@@ -145,21 +148,26 @@ const buildingList: readonly Building[] = Object.freeze([
         buildingName: "第一体育館",
         lat: 34.731911335115434,
         lng: 135.23725466874964,
+        buildingLayoutPdfUrl:
+            "https://drive.google.com/file/d/1T7PrmTjten3kCPvmJl1gF3KMAcEubImI/view?usp=sharing",
     },
     {
         buildingId: 13,
         campusId: 3,
-        buildingName:
-            "D棟 （国際コミュニケーションセンター）",
+        buildingName: "D棟 （国際コミュニケーションセンター）",
         lat: 34.731674846369295,
         lng: 135.23638645607508,
+        buildingLayoutPdfUrl:
+            "https://drive.google.com/file/d/1T7PrmTjten3kCPvmJl1gF3KMAcEubImI/view?usp=sharing",
     },
     {
         buildingId: 14,
         campusId: 3,
         buildingName: "N棟",
         lat: 34.73133123086252,
-        lng: 135.23620244919934
+        lng: 135.23620244919934,
+        buildingLayoutPdfUrl:
+            "https://drive.google.com/file/d/1T7PrmTjten3kCPvmJl1gF3KMAcEubImI/view?usp=sharing",
     },
     {
         buildingId: 15,
@@ -167,21 +175,26 @@ const buildingList: readonly Building[] = Object.freeze([
         buildingName: "K棟（+情報処理室）",
         lat: 34.731121146868965,
         lng: 135.2358958177603,
+        buildingLayoutPdfUrl:
+            "https://drive.google.com/file/d/1T7PrmTjten3kCPvmJl1gF3KMAcEubImI/view?usp=sharing",
     },
     {
         buildingId: 16,
         campusId: 3,
         buildingName: "大学教育推進機構（教養教育院）・化学実験室",
-        lat: 326,
-        lng: 124,
+        lat: 34.73096518512518,
+        lng: 135.23605670612676,
+        buildingLayoutPdfUrl:
+            "https://drive.google.com/file/d/1T7PrmTjten3kCPvmJl1gF3KMAcEubImI/view?usp=sharing",
     },
     {
         buildingId: 17,
         campusId: 3,
-        buildingName:
-            "C棟",
+        buildingName: "C棟",
         lat: 34.73094778823293,
         lng: 135.23606751373367,
+        buildingLayoutPdfUrl:
+            "https://drive.google.com/file/d/1T7PrmTjten3kCPvmJl1gF3KMAcEubImI/view?usp=sharing",
     },
     {
         buildingId: 18,
@@ -189,6 +202,8 @@ const buildingList: readonly Building[] = Object.freeze([
         buildingName: "F棟",
         lat: 34.73106873615689,
         lng: 135.23685240961203,
+        buildingLayoutPdfUrl:
+            "https://drive.google.com/file/d/1T7PrmTjten3kCPvmJl1gF3KMAcEubImI/view?usp=sharing",
     },
     {
         buildingId: 19,
@@ -196,14 +211,17 @@ const buildingList: readonly Building[] = Object.freeze([
         buildingName: "M棟",
         lat: 34.730867156185305,
         lng: 135.23643543367666,
+        buildingLayoutPdfUrl:
+            "https://drive.google.com/file/d/1T7PrmTjten3kCPvmJl1gF3KMAcEubImI/view?usp=sharing",
     },
     {
         buildingId: 20,
         campusId: 3,
-        buildingName:
-            "B棟（学生センター）",
+        buildingName: "B棟（学生センター）",
         lat: 34.730717986689804,
         lng: 135.23677882562342,
+        buildingLayoutPdfUrl:
+            "https://drive.google.com/file/d/1T7PrmTjten3kCPvmJl1gF3KMAcEubImI/view?usp=sharing",
     },
     {
         buildingId: 21,
@@ -211,14 +229,17 @@ const buildingList: readonly Building[] = Object.freeze([
         buildingName: "大、中講義室・B109・B110・B209・B210",
         lat: 34.73053656396759,
         lng: 135.23613128652383,
+        buildingLayoutPdfUrl:
+            "https://drive.google.com/file/d/1T7PrmTjten3kCPvmJl1gF3KMAcEubImI/view?usp=sharing",
     },
     {
         buildingId: 22,
         campusId: 3,
-        buildingName:
-            "L棟（キャンパスライフ支援センター）",
+        buildingName: "L棟（キャンパスライフ支援センター）",
         lat: 34.73043577339428,
         lng: 135.23663656324547,
+        buildingLayoutPdfUrl:
+            "https://drive.google.com/file/d/1T7PrmTjten3kCPvmJl1gF3KMAcEubImI/view?usp=sharing",
     },
     {
         buildingId: 23,
@@ -226,6 +247,8 @@ const buildingList: readonly Building[] = Object.freeze([
         buildingName: "E棟",
         lat: 34.7303994887578,
         lng: 135.23700938878767,
+        buildingLayoutPdfUrl:
+            "https://drive.google.com/file/d/1T7PrmTjten3kCPvmJl1gF3KMAcEubImI/view?usp=sharing",
     },
     {
         buildingId: 24,
@@ -234,6 +257,8 @@ const buildingList: readonly Building[] = Object.freeze([
             "A棟（総合・国際文化学図書館、ラーニングコモンズ、キャリアセンター）",
         lat: 34.73008905287323,
         lng: 135.23675920322646,
+        buildingLayoutPdfUrl:
+            "https://drive.google.com/file/d/1T7PrmTjten3kCPvmJl1gF3KMAcEubImI/view?usp=sharing",
     },
     {
         buildingId: 25,
@@ -241,6 +266,8 @@ const buildingList: readonly Building[] = Object.freeze([
         buildingName: "学生会館",
         lat: 34.72927062541144,
         lng: 135.2361803424828,
+        buildingLayoutPdfUrl:
+            "https://drive.google.com/file/d/1T7PrmTjten3kCPvmJl1gF3KMAcEubImI/view?usp=sharing",
     },
     {
         buildingId: 26,
@@ -283,6 +310,8 @@ const buildingList: readonly Building[] = Object.freeze([
         buildingName: "第二学舎(Ⅱ)（法学部学者・法学研究科）",
         lat: 34.72912396597631,
         lng: 135.23332110908393,
+        buildingLayoutPdfUrl:
+            "https://drive.google.com/file/d/1hjNwU0cj5RciNW-9ejlRQQXGeDQ6VW2P/view?usp=sharing",
     },
     {
         buildingId: 32,
@@ -326,6 +355,8 @@ const buildingList: readonly Building[] = Object.freeze([
             "六甲台本館(Ⅰ)（経済学研究科、経営学研究科、社会システムイノベーションセンター）",
         lat: 34.728250831303924,
         lng: 135.23475042885923,
+        buildingLayoutPdfUrl:
+            "https://drive.google.com/file/d/1rS9rfHk5TBC0Mf_QxLOh1jalTpwVF5SC/view?usp=sharing",
     },
     {
         buildingId: 38,
@@ -396,6 +427,8 @@ const buildingList: readonly Building[] = Object.freeze([
         buildingName: "工学研究科・5E,5W,C4棟",
         lat: 34.72772653846344,
         lng: 135.23716512103496,
+        buildingLayoutPdfUrl:
+            "https://drive.google.com/file/d/1htYvg8DFZGLiq6dJHji7QyfhJE0u29Fs/view?usp=sharing",
     },
     {
         buildingId: 48,
@@ -403,6 +436,8 @@ const buildingList: readonly Building[] = Object.freeze([
         buildingName: "工学研究科・LR棟",
         lat: 34.727526482758165,
         lng: 135.23683718638068,
+        buildingLayoutPdfUrl:
+            "https://drive.google.com/file/d/1htYvg8DFZGLiq6dJHji7QyfhJE0u29Fs/view?usp=sharing",
     },
     {
         buildingId: 49,
@@ -410,6 +445,8 @@ const buildingList: readonly Building[] = Object.freeze([
         buildingName: "工学研究科・4E,4W,C3棟",
         lat: 34.72742645472396,
         lng: 135.23745924799292,
+        buildingLayoutPdfUrl:
+            "https://drive.google.com/file/d/1htYvg8DFZGLiq6dJHji7QyfhJE0u29Fs/view?usp=sharing",
     },
     {
         buildingId: 50,
@@ -417,6 +454,8 @@ const buildingList: readonly Building[] = Object.freeze([
         buildingName: "工学研究科・3E,3W,C2棟",
         lat: 34.72713192703142,
         lng: 135.2376756172493,
+        buildingLayoutPdfUrl:
+            "https://drive.google.com/file/d/1htYvg8DFZGLiq6dJHji7QyfhJE0u29Fs/view?usp=sharing",
     },
     {
         buildingId: 51,
@@ -424,6 +463,8 @@ const buildingList: readonly Building[] = Object.freeze([
         buildingName: "工学研究科・D1,D2棟(+NSSOLLab)",
         lat: 34.726929091303774,
         lng: 135.23714145565188,
+        buildingLayoutPdfUrl:
+            "https://drive.google.com/file/d/1htYvg8DFZGLiq6dJHji7QyfhJE0u29Fs/view?usp=sharing",
     },
     {
         buildingId: 52,
@@ -431,6 +472,8 @@ const buildingList: readonly Building[] = Object.freeze([
         buildingName: "工学研究科・2E,2W,C1棟",
         lat: 34.72675404089938,
         lng: 135.237608001861,
+        buildingLayoutPdfUrl:
+            "https://drive.google.com/file/d/1htYvg8DFZGLiq6dJHji7QyfhJE0u29Fs/view?usp=sharing",
     },
     {
         buildingId: 53,
@@ -438,6 +481,8 @@ const buildingList: readonly Building[] = Object.freeze([
         buildingName: "工学研究科・B棟",
         lat: 34.72692075557864,
         lng: 135.23835177117994,
+        buildingLayoutPdfUrl:
+            "https://drive.google.com/file/d/1htYvg8DFZGLiq6dJHji7QyfhJE0u29Fs/view?usp=sharing",
     },
     {
         buildingId: 54,
@@ -445,6 +490,8 @@ const buildingList: readonly Building[] = Object.freeze([
         buildingName: "工学研究科・1E,1W棟",
         lat: 34.72645951081102,
         lng: 135.23782775188707,
+        buildingLayoutPdfUrl:
+            "https://drive.google.com/file/d/1htYvg8DFZGLiq6dJHji7QyfhJE0u29Fs/view?usp=sharing",
     },
     {
         buildingId: 55,
@@ -452,6 +499,8 @@ const buildingList: readonly Building[] = Object.freeze([
         buildingName: "工学研究科・A棟",
         lat: 34.72666234768248,
         lng: 135.23848362119557,
+        buildingLayoutPdfUrl:
+            "https://drive.google.com/file/d/1htYvg8DFZGLiq6dJHji7QyfhJE0u29Fs/view?usp=sharing",
     },
     {
         buildingId: 56,
@@ -620,6 +669,8 @@ const buildingList: readonly Building[] = Object.freeze([
         campusId: 2,
         lat: 34.72576870566009,
         lng: 135.23467860986045,
+        buildingLayoutPdfUrl:
+            "https://drive.google.com/file/d/1tWoh1wPSQ9AIktYpc5X7fYZ8GQkEsc9r/view?usp=sharing",
     },
     {
         buildingId: 80,
@@ -641,6 +692,8 @@ const buildingList: readonly Building[] = Object.freeze([
         campusId: 2,
         lat: 34.72562847707775,
         lng: 135.23507834226524,
+        buildingLayoutPdfUrl:
+            "https://drive.google.com/file/d/1hX0-NuEDVSAa-WoFoV7cl0N08qIELsTr/view?usp=sharing",
     },
     {
         buildingId: 83,
@@ -648,6 +701,8 @@ const buildingList: readonly Building[] = Object.freeze([
         campusId: 2,
         lat: 34.72538407811533,
         lng: 135.23504909355427,
+        buildingLayoutPdfUrl:
+            "https://drive.google.com/file/d/1X0bX3Z4RWoRVAtO7L8OQHZlXC3EF1vBE/view?usp=sharing",
     },
     {
         buildingId: 84,
@@ -655,6 +710,8 @@ const buildingList: readonly Building[] = Object.freeze([
         campusId: 2,
         lat: 34.72515971122554,
         lng: 135.2351319649065,
+        buildingLayoutPdfUrl:
+            "https://drive.google.com/file/d/1hX0-NuEDVSAa-WoFoV7cl0N08qIELsTr/view?usp=sharing",
     },
     {
         buildingId: 85,
@@ -662,6 +719,8 @@ const buildingList: readonly Building[] = Object.freeze([
         campusId: 2,
         lat: 34.725055540676856,
         lng: 135.2355219477404,
+        buildingLayoutPdfUrl:
+            "https://drive.google.com/file/d/1DFaJWeHq7BMuSW7cQg_TLn5u8ivVYvQO/view?usp=sharing",
     },
     {
         buildingId: 86,
@@ -690,6 +749,8 @@ const buildingList: readonly Building[] = Object.freeze([
         campusId: 2,
         lat: 34.7254882482501,
         lng: 135.23366952920713,
+        buildingLayoutPdfUrl:
+            "https://drive.google.com/file/d/1DUWSG3KU0-qEDnzmoGAaytBoKIK_h7AP/view?usp=sharing",
     },
     {
         buildingId: 90,
@@ -697,6 +758,8 @@ const buildingList: readonly Building[] = Object.freeze([
         campusId: 2,
         lat: 34.725183750564355,
         lng: 135.23346478821932,
+        buildingLayoutPdfUrl:
+            "https://drive.google.com/file/d/1DUWSG3KU0-qEDnzmoGAaytBoKIK_h7AP/view?usp=sharing",
     },
     {
         buildingId: 91,
@@ -704,6 +767,8 @@ const buildingList: readonly Building[] = Object.freeze([
         campusId: 2,
         lat: 34.725079580045964,
         lng: 135.23375240055935,
+        buildingLayoutPdfUrl:
+            "https://drive.google.com/file/d/1DUWSG3KU0-qEDnzmoGAaytBoKIK_h7AP/view?usp=sharing",
     },
     {
         buildingId: 92,
@@ -711,6 +776,8 @@ const buildingList: readonly Building[] = Object.freeze([
         campusId: 2,
         lat: 34.72491130431586,
         lng: 135.23327954637318,
+        buildingLayoutPdfUrl:
+            "https://drive.google.com/file/d/1DUWSG3KU0-qEDnzmoGAaytBoKIK_h7AP/view?usp=sharing",
     },
     {
         buildingId: 93,
@@ -718,6 +785,8 @@ const buildingList: readonly Building[] = Object.freeze([
         campusId: 2,
         lat: 34.72463084400455,
         lng: 135.23327954637318,
+        buildingLayoutPdfUrl:
+            "https://drive.google.com/file/d/1DUWSG3KU0-qEDnzmoGAaytBoKIK_h7AP/view?usp=sharing",
     },
     {
         buildingId: 94,
@@ -725,6 +794,8 @@ const buildingList: readonly Building[] = Object.freeze([
         campusId: 2,
         lat: 34.72459879133696,
         lng: 135.23281156697246,
+        buildingLayoutPdfUrl:
+            "https://drive.google.com/file/d/1DUWSG3KU0-qEDnzmoGAaytBoKIK_h7AP/view?usp=sharing",
     },
     {
         buildingId: 95,
@@ -739,6 +810,8 @@ const buildingList: readonly Building[] = Object.freeze([
         campusId: 2,
         lat: 34.724710975616475,
         lng: 135.23446411925897,
+        buildingLayoutPdfUrl:
+            "https://drive.google.com/file/d/1YAP2eo6fiS0f31oObSlMaEnn1loWXt2t/view?usp=sharing",
     },
     {
         buildingId: 97,
@@ -746,6 +819,8 @@ const buildingList: readonly Building[] = Object.freeze([
         campusId: 2,
         lat: 34.72475504797139,
         lng: 135.23496622215768,
+        buildingLayoutPdfUrl:
+            "https://drive.google.com/file/d/1YAP2eo6fiS0f31oObSlMaEnn1loWXt2t/view?usp=sharing",
     },
     {
         buildingId: 98,
@@ -753,6 +828,8 @@ const buildingList: readonly Building[] = Object.freeze([
         campusId: 2,
         lat: 34.724538692549025,
         lng: 135.23466886024679,
+        buildingLayoutPdfUrl:
+            "https://drive.google.com/file/d/1YAP2eo6fiS0f31oObSlMaEnn1loWXt2t/view?usp=sharing",
     },
     {
         buildingId: 99,
@@ -975,6 +1052,8 @@ const buildingList: readonly Building[] = Object.freeze([
         buildingName: "海事科学研究科・4号館",
         lat: 34.71996763121932,
         lng: 135.29134199917004,
+        buildingLayoutPdfUrl:
+            "https://drive.google.com/file/d/1tJx3rURrF2mCpn1hUaUj1GqAX_dHzf6_/view?usp=sharing",
     },
     {
         buildingId: 6,
@@ -1017,6 +1096,8 @@ const buildingList: readonly Building[] = Object.freeze([
         buildingName: "海事科学研究科・3号館",
         lat: 34.71936124543462,
         lng: 135.2913550262305,
+        buildingLayoutPdfUrl:
+            "https://drive.google.com/file/d/14cRIkGdQ2-h_CgNZRs9HjTg2brIbPYOJ/view?usp=sharing",
     },
     {
         buildingId: 12,
@@ -1024,6 +1105,8 @@ const buildingList: readonly Building[] = Object.freeze([
         buildingName: "海事科学研究科・5号館",
         lat: 34.71957663951144,
         lng: 135.2909403993496,
+        buildingLayoutPdfUrl:
+            "https://drive.google.com/file/d/18t9dT1bfGJtnS0eq58uIZCF2IYMQqiRd/view?usp=sharing",
     },
     {
         buildingId: 13,
@@ -1031,6 +1114,8 @@ const buildingList: readonly Building[] = Object.freeze([
         buildingName: "海事科学研究科・2号館",
         lat: 34.71968949634341,
         lng: 135.29027638843928,
+        buildingLayoutPdfUrl:
+            "https://drive.google.com/file/d/1-H-yF0fzc7t8UZzED-n0ozb5W1kL49S6/view?usp=sharing",
     },
     {
         buildingId: 14,
@@ -1095,6 +1180,8 @@ const buildingList: readonly Building[] = Object.freeze([
         buildingName: "海事科学研究科・6号館",
         lat: 34.71813351587439,
         lng: 135.2889550278118,
+        buildingLayoutPdfUrl:
+            "https://drive.google.com/file/d/1ycvba0sqdPVhoZBRJS5fa3pda83JunOr/view?usp=sharing",
     },
     {
         buildingId: 23,
@@ -1109,6 +1196,8 @@ const buildingList: readonly Building[] = Object.freeze([
         buildingName: "附属図書館海事科学分館",
         lat: 34.71851927795944,
         lng: 135.2894475066524,
+        buildingLayoutPdfUrl:
+            "https://drive.google.com/file/d/1HwALQqPEx61vmGTWfULFkcjcp_k_mV1N/view?usp=sharing",
     },
     {
         buildingId: 25,
@@ -1116,6 +1205,8 @@ const buildingList: readonly Building[] = Object.freeze([
         buildingName: "海事科学研究科・1号館",
         lat: 34.71862840897867,
         lng: 135.28987129567423,
+        buildingLayoutPdfUrl:
+            "https://drive.google.com/file/d/1KzvvG7nL1lRl6Pas4q7u-ftki60RgdDB/view?usp=sharing",
     },
     {
         buildingId: 26,
