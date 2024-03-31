@@ -6,8 +6,9 @@ import {
     BuildingSearchResultCard,
     GoogleMapIFrame,
 } from "./components";
+import { Suspense } from "react";
 
-export default function Page() {
+const PageComponent = () => {
     const searchParams = useSearchParams();
     const campusId = parseInt(searchParams.get("campusId") || "3");
     const keyword = searchParams.get("keyword") || "";
@@ -16,6 +17,8 @@ export default function Page() {
 
     const building = findBuildingByKeyword(campusId, keyword);
     const campus = findCampusById(campusId);
+
+    const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${building?.lat},${building?.lng}`;
 
     if (!campus) {
         throw Error("campusIdが登録されていません。");
@@ -30,6 +33,8 @@ export default function Page() {
                     mapImageUrl={campus.mapImageUrl}
                     buildingId={building?.buildingId}
                     buildingName={building?.buildingName}
+                    buildingLayoutPdfUrl={building?.buildingLayoutPdfUrl}
+                    googleMapsUrl={googleMapsUrl}
                 />
             )}
             <GoogleMapIFrame
@@ -38,5 +43,13 @@ export default function Page() {
                 q={building ? undefined : campus.campusName}
             />
         </div>
+    );
+};
+
+export default function Page() {
+    return (
+        <Suspense>
+            <PageComponent />
+        </Suspense>
     );
 }

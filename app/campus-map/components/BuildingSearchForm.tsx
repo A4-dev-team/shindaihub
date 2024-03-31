@@ -9,7 +9,7 @@ import { BuildingSearchFormInputType } from "../types";
 
 const BuildingSearchForm = (props: BuildingSearchFormInputType) => {
     const { campusId, keyword } = props;
-    const { isValid, control, handleSubmit, setValue, watch } =
+    const { isValid, control, handleSubmit, setValue, watch, trigger } =
         useBuildingSearchForm({ campusId, keyword });
 
     const watchCampusId = watch("campusId");
@@ -22,6 +22,11 @@ const BuildingSearchForm = (props: BuildingSearchFormInputType) => {
         });
 
     const { onSubmit } = useSubmitBuildingSearchForm();
+
+    const handleClickSuggestions = async (buildingName: string) => {
+        setValue("keyword", buildingName);
+        await trigger("keyword");
+    };
 
     const buttonColor = isValid
         ? "bg-indigo-500 hover:bg-indigo-700 focus:ring-indigo-400"
@@ -80,8 +85,7 @@ const BuildingSearchForm = (props: BuildingSearchFormInputType) => {
                                                 key={index}
                                                 className="p-2 hover:bg-gray-100 border-b"
                                                 onMouseDown={() =>
-                                                    setValue(
-                                                        "keyword",
+                                                    handleClickSuggestions(
                                                         suggestion.buildingName
                                                     )
                                                 }
