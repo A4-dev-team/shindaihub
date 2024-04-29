@@ -62,9 +62,13 @@ export default function Home() {
                 </div>
             </div>
             <div className="text-sm md:text-xl">
+                サービスに関する重要なお知らせがあります。<br/>
+                <Link href="/news" className="text-bluenormal font-bold">お知らせ</Link>からご確認ください。<br/>
+            </div>
+            {/* <div className="text-sm md:text-xl">
                 SHINDAI HUBを一緒に作るメンバーを募集しています！<br/>
                 ぜひ<Link href="/recruit" className="text-bluenormal font-bold">採用情報</Link>からご確認ください。<br/>
-            </div>
+            </div> */}
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-10">
                 {serviceBlockPropsList.map((props, index) => {
                     const {
