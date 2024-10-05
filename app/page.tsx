@@ -1,18 +1,29 @@
 import { IoHome } from "react-icons/io5";
 import { IoIosSchool } from "react-icons/io";
-import { PiForkKnife } from "react-icons/pi";
-import { FaBook, FaMapMarkedAlt } from "react-icons/fa";
+import { FaMapMarkedAlt } from "react-icons/fa";
+import { BiSolidBowlRice } from "react-icons/bi";
 import { ServiceBlock, ServiceBlockProps } from "@/components/serviceBlock";
 import Link from "next/link";
+import Information from "@/components/Information";
+import Footer from "@/components/Footer";
 
 // サービス追加する時はここに追加
 const serviceBlockPropsList: ServiceBlockProps[] = [
+    {
+        serviceName: "えーごはん",
+        url: "https://shindaihub-meal.vercel.app/restaurants",
+        IconElement: <BiSolidBowlRice />,
+        textContent: [
+            "神大生のための六甲周辺の飲食店を20軒以上掲載！",
+            "あなたにピッタリなお店を見つけられます！",
+        ],
+    },
     {
         serviceName: "賃貸",
         url: "callback?redirect=https://shindaihub-rentalhouse.glide.page/",
         IconElement: <IoHome />,
         textContent: [
-            "神戸大学生のための賃貸情報を掲載！",
+            "神大生のための賃貸情報を掲載！",
             "実際に住んでいる先輩の口コミを確認できます！",
         ],
     },
@@ -34,20 +45,6 @@ const serviceBlockPropsList: ServiceBlockProps[] = [
             "建物名前で検索し、Google Mapで確認できます！",
         ],
     },
-    {
-        serviceName: "教科書",
-        url: "#",
-        IconElement: <FaBook />,
-        textContent: ["Coming Soon..."],
-        isDisabled: true,
-    },
-    {
-        serviceName: "ご飯",
-        url: "#",
-        IconElement: <PiForkKnife />,
-        textContent: ["Coming Soon..."],
-        isDisabled: true,
-    },
 ];
 
 export default function Home() {
@@ -61,10 +58,12 @@ export default function Home() {
                     神大生に最高の学生生活を届ける。
                 </div>
             </div>
-            <div className="text-sm md:text-xl">
-                絶賛、ご飯プロダクトを開発中！<br />
-                A4は年中メンバーを募集しています。<br />
-                もし、興味のある方は<Link href="https://docs.google.com/forms/d/e/1FAIpQLSdd8pRWg--WICAUeBqDEEZuk0dW2hzOXVU12B09JjCJgNfKrw/viewform?usp=sf_link" className="text-bluenormal font-bold">こちら</Link>のフォームよりご応募ください。
+            <div>
+                <Information 
+                    title="10/6「えーごはん」リリースいたしました！" 
+                    message=""
+                    url="https://drive.google.com/file/d/1Nk9xC13G3sN84-QIFRWVvoOdyB_5y4VZ/view?usp=sharing" 
+                />
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-10">
                 {serviceBlockPropsList.map((props, index) => {
@@ -87,6 +86,7 @@ export default function Home() {
                     );
                 })}
             </div>
+            <Footer />
         </div>
     );
 }
