@@ -47,11 +47,13 @@ const serviceBlockPropsList: ServiceBlockProps[] = [
         ],
     },
     {
-        serviceName: "六甲祭謎解きアプリ",
+        serviceName: "SHINDAIHUBを取り戻せ！",
         url: "https://a4-rokkousai-app.vercel.app/",
         IconElement:<FaPuzzlePiece/>,
         textContent: [
-            "SHINDAIHUBを取り戻せ！",
+            "運営する「SHINDAI HUB」がハッキングを受けたと報告が届く。",
+            "仲間と頭脳を結集し、サイバー空間の謎を解き明かせ。",
+            "面白さ満点のオンライン謎解きゲーム、SHINDAI HUBの運命は君の手に！",
         ],
     },
 ];
