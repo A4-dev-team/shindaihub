@@ -51,8 +51,8 @@ const serviceBlockPropsList: ServiceBlockProps[] = [
         url: "https://a4-rokkousai-app.vercel.app/",
         IconElement:<FaPuzzlePiece/>,
         textContent: [
-            "運営する「SHINDAI HUB」がハッキングを受けたと報告が届く。",
-            "仲間と頭脳を結集し、サイバー空間の謎を解き明かせ。",
+            "運営する「SHINDAI HUB」にバグが発生したと報告が届く。",
+            "仲間と頭脳を結集し、犯人からの謎を解き明かせ。",
             "面白さ満点のオンライン謎解きゲーム、SHINDAI HUBの運命は君の手に！",
         ],
     },
