@@ -57,6 +57,14 @@ const campusList: readonly Campus[] = Object.freeze([
         lat: 34.719160171940416,
         lng: 135.2908471225263,
     },
+    {
+        campusId: 8,
+        areaName: "",
+        campusName: "六甲台",
+        mapImageUrl: "",
+        lat: "",
+        lng: "",
+    },
 ]);
 
 const buildingList: readonly Building[] = Object.freeze([
@@ -1235,6 +1243,35 @@ const buildingList: readonly Building[] = Object.freeze([
         buildingName: "進徳丸メモリアル",
         lat: 34.71835049927896,
         lng: 135.2926795555756,
+    },
+    //campusId: 8（六甲台）
+    {
+        buildingId: 1,
+        campusId: 8,
+        buildingName: "ロイ先生",
+        lat: "",
+        lng: "",
+    },
+    {
+        buildingId: 2,
+        campusId: 8,
+        buildingName: "水島先生",
+        lat: "",
+        lng: "",
+    },
+    {
+        buildingId: 3,
+        campusId: 8,
+        buildingName: "兼松先生",
+        lat: "",
+        lng: "",
+    },
+    {
+        buildingId: 4,
+        campusId: 8,
+        buildingName: "田崎先生",
+        lat: "",
+        lng: "",
     },
 ]);
 
