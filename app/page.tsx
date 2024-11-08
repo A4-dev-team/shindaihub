@@ -47,7 +47,7 @@ const serviceBlockPropsList: ServiceBlockProps[] = [
         ],
     },
     {
-        serviceName: "SHINDAIHUBを取り戻せ",
+        serviceName: "SHINDAI HUBを取り戻せ",
         url: "https://a4-rokkousai-app.vercel.app/",
         IconElement:<FaPuzzlePiece/>,
         textContent: [
