@@ -57,6 +57,14 @@ const campusList: readonly Campus[] = Object.freeze([
         lat: 34.719160171940416,
         lng: 135.2908471225263,
     },
+    {
+        campusId: 8,
+        areaName: "",
+        campusName: "六甲台",
+        mapImageUrl: "",
+        lat: "",
+        lng: "",
+    },
 ]);
 
 const buildingList: readonly Building[] = Object.freeze([
@@ -1236,6 +1244,7 @@ const buildingList: readonly Building[] = Object.freeze([
         lat: 34.71835049927896,
         lng: 135.2926795555756,
     },
+<<<<<<< HEAD
     {
         buildingId: 200,
         campusId: 1,

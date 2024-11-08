@@ -1,6 +1,7 @@
 import { IoHome } from "react-icons/io5";
 import { IoIosSchool } from "react-icons/io";
 import { FaMapMarkedAlt } from "react-icons/fa";
+import { FaPuzzlePiece } from 'react-icons/fa';
 import { BiSolidBowlRice } from "react-icons/bi";
 import { ServiceBlock, ServiceBlockProps } from "@/components/serviceBlock";
 import Link from "next/link";
@@ -43,6 +44,16 @@ const serviceBlockPropsList: ServiceBlockProps[] = [
         textContent: [
             "神戸大学のキャンパスマップを掲載！",
             "建物名前で検索し、Google Mapで確認できます！",
+        ],
+    },
+    {
+        serviceName: "SHINDAI HUBを取り戻せ",
+        url: "https://a4-rokkousai-app.vercel.app/",
+        IconElement:<FaPuzzlePiece/>,
+        textContent: [
+            "運営する「SHINDAI HUB」にバグが発生したと報告が届く。",
+            "仲間と頭脳を結集し、犯人からの謎を解き明かせ。",
+            "面白さ満点のオンライン謎解きゲーム、SHINDAI HUBの運命は君の手に！",
         ],
     },
 ];
