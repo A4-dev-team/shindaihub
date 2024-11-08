@@ -1,6 +1,7 @@
 import { IoHome } from "react-icons/io5";
 import { IoIosSchool } from "react-icons/io";
 import { FaMapMarkedAlt } from "react-icons/fa";
+import { FaPuzzlePiece } from 'react-icons/fa';
 import { BiSolidBowlRice } from "react-icons/bi";
 import { ServiceBlock, ServiceBlockProps } from "@/components/serviceBlock";
 import Link from "next/link";
@@ -43,6 +44,14 @@ const serviceBlockPropsList: ServiceBlockProps[] = [
         textContent: [
             "神戸大学のキャンパスマップを掲載！",
             "建物名前で検索し、Google Mapで確認できます！",
+        ],
+    },
+    {
+        serviceName: "六甲祭謎解きアプリ",
+        url: "https://a4-rokkousai-app.vercel.app/",
+        IconElement:<FaPuzzlePiece/>,
+        textContent: [
+            "SHINDAIHUBを取り戻せ！",
         ],
     },
 ];
