@@ -55,6 +55,7 @@ const serviceBlockPropsList: ServiceBlockProps[] = [
             "仲間と頭脳を結集し、犯人からの謎を解き明かせ。",
             "面白さ満点のオンライン謎解きゲーム、SHINDAI HUBの運命は君の手に！",
         ],
+        isDisabled: true,
     },
 ];
 
