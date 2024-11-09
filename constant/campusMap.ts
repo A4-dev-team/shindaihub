@@ -1240,29 +1240,29 @@ const buildingList: readonly Building[] = Object.freeze([
         buildingId: 200,
         campusId: 1,
         buildingName: "ロイ先生",
-        lat: 34.727139,
-        lng: 135.234139,
+        lat: 34.7277448,
+        lng: 135.2343392
     },
     {
         buildingId: 201,
         campusId: 1,
         buildingName: "水島先生",
-        lat: 34.727139,
-        lng: 135.234139,
+        lat: 34.7279553,
+        lng: 135.2339610,
     },
     {
         buildingId: 202,
         campusId: 1,
         buildingName: "兼松先生",
-        lat: 34.727139,
-        lng: 135.234139,
+        lat: 34.7291724,
+        lng: 135.2350101,
     },
     {
         buildingId: 203,
         campusId: 1,
         buildingName: "田崎先生",
-        lat: 34.727139,
-        lng: 135.234139,
+        lat: 34.7280355,
+        lng: 135.2344760,
     },
 ]);
 
