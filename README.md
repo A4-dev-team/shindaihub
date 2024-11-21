@@ -10,4 +10,3 @@
   - whitecustum: "#F2F2F2",
     ![BrandColor](https://github.com/Keisuke05410/kobeUni-portal/assets/113495285/8180fa07-85e1-4c83-85f6-cb883a43b327)
 - デザインは MUI を使用する(https://mui.com/)
-- tests
