@@ -46,16 +46,6 @@ const serviceBlockPropsList: ServiceBlockProps[] = [
             "建物名前で検索し、Google Mapで確認できます！",
         ],
     },
-    {
-        serviceName: "SHINDAI HUBを取り戻せ",
-        url: "https://a4-rokkousai-app.vercel.app/",
-        IconElement:<FaPuzzlePiece/>,
-        textContent: [
-            "運営する「SHINDAI HUB」にバグが発生したと報告が届く。",
-            "仲間と頭脳を結集し、犯人からの謎を解き明かせ。",
-            "面白さ満点のオンライン謎解きゲーム、SHINDAI HUBの運命は君の手に！",
-        ],
-    },
 ];
 
 export default function Home() {
@@ -71,9 +61,9 @@ export default function Home() {
             </div>
             <div>
                 <Information 
-                    title="10/6「えーごはん」リリースいたしました！" 
+                    title="2024/12/18「SHINDAI HUBを取り戻せ」をサービス終了いたしました。ご愛顧くださりありがとうございました！" 
                     message=""
-                    url="https://drive.google.com/file/d/1Nk9xC13G3sN84-QIFRWVvoOdyB_5y4VZ/view?usp=sharing" 
+                    url="" 
                 />
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-10">
